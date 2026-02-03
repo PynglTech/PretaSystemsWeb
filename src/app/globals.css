@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+    --color-deep-void: #070B1A;
+    --color-neon-green: #39FF14;
+    --color-accent: #39FF14;
+    --color-electric: #8B5CF6;
+    --color-ocean: #3B82F6;
+    --color-card: #121212;
+    --color-dark: #070B1A;
+
+    --font-mono: var(--font-jetbrains-mono);
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+        overflow-y: scroll;
+        /* Force vertical scrollbar to prevent layout shift */
+    }
+
+    body {
+        background-color: var(--color-deep-void);
+        color: white;
+        font-family: var(--font-inter-tight), sans-serif;
+        overflow-x: hidden;
+    }
+}
