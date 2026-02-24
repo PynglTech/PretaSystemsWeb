@@ -10,6 +10,7 @@
     --color-dark: #070B1A;
 
     --font-mono: var(--font-jetbrains-mono);
+    --font-inter: var(--font-inter);
 }
 
 @layer base {
@@ -24,5 +25,16 @@
         color: white;
         font-family: var(--font-inter-tight), sans-serif;
         overflow-x: hidden;
+    }
+}
+
+@layer utilities {
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
     }
 }

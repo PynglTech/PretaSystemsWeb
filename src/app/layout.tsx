@@ -1,9 +1,15 @@
 import type { Metadata } from "next";
-import { Inter_Tight, JetBrains_Mono } from "next/font/google";
+import { Inter, Inter_Tight, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/ui/SmoothScroll";
 import ScrollToTop from "@/components/ui/ScrollToTop";
 import PreloaderDecryption from "@/components/ui/PreloaderDecryption";
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+  display: "swap",
+});
 
 const interTight = Inter_Tight({
   variable: "--font-inter-tight",
@@ -30,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
       <body
-        className={`${interTight.variable} ${jetbrainsMono.variable} antialiased bg-deep-void text-white selection:bg-neon-green/30 selection:text-neon-green`}
+        className={`${inter.variable} ${interTight.variable} ${jetbrainsMono.variable} antialiased bg-deep-void text-white selection:bg-neon-green/30 selection:text-neon-green`}
         suppressHydrationWarning
       >
         <SmoothScroll>
