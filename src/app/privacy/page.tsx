@@ -153,7 +153,7 @@ export default function PrivacyPolicyPage() {
                                     </div>
                                 </section>
 
-                                {/* 2. Data Collection & Usage */}
+                               
                                 <section id="collection" className="scroll-mt-32">
                                     <h2 className="text-2xl font-bold text-white mb-8 flex items-center gap-4">
                                         <div className="w-10 h-10 bg-neon-green/10 rounded-xl flex items-center justify-center">
