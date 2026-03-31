@@ -17,7 +17,7 @@ export const TeamIntegrationsCluster = () => {
                     viewBox="0 0 394 312"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    className="absolute right-[140px] bottom-[300px] lg:right-[160px] lg:bottom-[320px] xl:right-[260px] xl:bottom-[280px] xl:w-[400px] w-[300px] h-auto scale-90 lg:scale-100 origin-center pointer-events-auto"
+                    className="absolute right-[80px] bottom-[260px] lg:right-[90px] lg:bottom-[260px] xl:right-[190px] xl:bottom-[240px] 2xl:right-[260px] 2xl:bottom-[280px] w-[240px] lg:w-[260px] xl:w-[300px] 2xl:w-[400px] h-auto scale-[0.75] lg:scale-[0.8] xl:scale-[0.85] 2xl:scale-100 origin-center pointer-events-auto"
                 >
                     <g filter="url(#filter0_d_team_badge)">
                         <path

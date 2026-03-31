@@ -17,7 +17,7 @@ export const LeftHeroCluster = () => {
                     viewBox="0 0 478 612"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    className="absolute left-[20px] lg:left-[40px] top-[170px] lg:top-[190px] xl:w-[478px] xl:h-[612px] w-auto h-auto scale-90 lg:scale-[0.95] xl:scale-[1.05] origin-top-left"
+                    className="absolute left-[10px] lg:left-[15px] xl:left-[25px] 2xl:left-[40px] top-[170px] lg:top-[190px] xl:w-[400px] xl:h-[512px] 2xl:w-[478px] 2xl:h-[612px] w-auto h-auto scale-[0.65] lg:scale-[0.72] xl:scale-[0.82] 2xl:scale-[1.05] origin-top-left"
                 >
                     {/* Animation Styles */}
                     <style>

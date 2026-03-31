@@ -11,8 +11,8 @@ export const TeamCluster = () => {
             transition={{ duration: 1, delay: 0.8 }}
         >
             <div className="relative w-full h-full">
-                <div className="absolute inset-0 md:inset-auto md:right-[50px] md:bottom-[20px] lg:right-[80px] lg:bottom-[40px] xl:right-[290px] xl:bottom-[100px] xl:w-[350px] w-full md:w-[280px] aspect-[4/3] pointer-events-auto">
-                    <svg viewBox="0 0 480 360" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full scale-90 lg:scale-100 origin-bottom-right">
+                <div className="absolute inset-0 md:inset-auto md:right-[20px] md:bottom-[10px] lg:right-[60px] lg:bottom-[30px] xl:right-[200px] xl:bottom-[110px] 2xl:right-[290px] 2xl:bottom-[100px] w-full md:w-[220px] lg:w-[240px] xl:w-[280px] 2xl:w-[350px] aspect-[4/3] pointer-events-auto">
+                    <svg viewBox="0 0 480 360" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full scale-[0.75] lg:scale-[0.8] xl:scale-[0.85] 2xl:scale-100 origin-bottom-right">
                         {/* Background Square */}
                         <rect x="0" y="0" width="480" height="360" rx="20" fill="#0A0A0A" fillOpacity="1" stroke="#1E293B" strokeWidth="1" strokeOpacity="0.3" />
 

@@ -111,7 +111,7 @@ export default function Hero() {
             </div>
 
             {/* Main Content - Centered and optimized for mobile - Hidden on mobile because PhoneHeroVisual contains the text */}
-            <div className="container mx-auto px-4 hidden md:flex flex-col items-center z-30 relative text-center -mt-10 md:-mt-48 lg:-mt-40 xl:-mt-48">
+            <div className="container mx-auto px-4 hidden md:flex flex-col items-center z-30 relative text-center -mt-10 md:-mt-20 lg:-mt-28 xl:-mt-36 2xl:-mt-48">
                 {/* Tech Badge - "The Ghost Hook" branding */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
@@ -125,7 +125,7 @@ export default function Hero() {
                 </motion.div>
 
                 {/* Headline - optimized for mobile readability */}
-                <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-inter-tight font-bold tracking-tighter mb-4 md:mb-8 max-w-[95vw] md:max-w-[90vw] lg:max-w-[70vw] xl:max-w-[90vw] leading-[1.15] md:leading-[0.95] lg:leading-[0.85]">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] xl:text-[4.2rem] 2xl:text-8xl font-inter-tight font-bold tracking-tighter mb-4 md:mb-8 max-w-[95vw] md:max-w-[80vw] lg:max-w-[70vw] xl:max-w-[70vw] 2xl:max-w-[85vw] leading-[1.15] md:leading-[0.95] lg:leading-[0.85]">
                     <div className="block mb-1 md:mb-2 lg:mb-4">
                         {"Test features on your live site".split(" ").map((word, i) => (
                             <motion.span

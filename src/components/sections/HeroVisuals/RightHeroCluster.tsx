@@ -17,7 +17,7 @@ export const RightHeroCluster = () => {
                     viewBox="0 0 351 512"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    className="absolute right-[20px] lg:right-[40px] top-[60px] lg:top-[80px] xl:w-[400px] xl:h-[580px] w-auto h-auto scale-90 lg:scale-[0.95] xl:scale-[1.05] origin-top-right"
+                    className="absolute right-[10px] lg:right-[15px] xl:right-[25px] 2xl:right-[40px] top-[60px] lg:top-[80px] xl:w-[380px] xl:h-[560px] 2xl:w-[400px] 2xl:h-[580px] w-auto h-auto scale-[0.65] lg:scale-[0.72] xl:scale-[0.82] 2xl:scale-[1.05] origin-top-right"
                 >
                     {/* Animated Connection Lines */}
                     <style>

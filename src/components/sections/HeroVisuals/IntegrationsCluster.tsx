@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export const IntegrationsCluster = () => {
     return (
         <motion.div
-            className="absolute left-1/2 -translate-x-1/2 bottom-[8%] z-20 pointer-events-none scale-[0.6] sm:scale-[0.8] md:scale-90 lg:scale-100 origin-bottom"
+            className="absolute left-1/2 -translate-x-1/2 bottom-[8%] z-20 pointer-events-none scale-[0.5] sm:scale-[0.6] md:scale-[0.65] lg:scale-[0.72] xl:scale-[0.82] 2xl:scale-100 origin-bottom"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1 }}
