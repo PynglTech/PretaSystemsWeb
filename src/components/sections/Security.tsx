@@ -21,7 +21,7 @@ const certifications = [
 
 export default function Security() {
     return (
-        <section className="pt-0 pb-32 relative overflow-hidden">
+        <section className="pt-0 pb-20 relative overflow-hidden">
             {/* Background Glow */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-neon-green/5 blur-[120px] rounded-full pointer-events-none" />
 
@@ -38,12 +38,11 @@ export default function Security() {
                         />
                         <div className="relative w-full h-full">
                             <Image
-                                src="/security-lock-neon.png"
+                                src="/final 3.png"
                                 alt="Security Lock"
                                 fill
-                                className="object-contain object-bottom mix-blend-lighten"
+                                className="object-contain object-bottom mix-blend-lighten scale-125"
                                 style={{ imageRendering: 'crisp-edges' }}
-                                quality={100}
                                 priority
                                 unoptimized
                             />
@@ -52,7 +51,7 @@ export default function Security() {
                 </div>
 
                 {/* Certifications Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto w-full mb-20 relative z-20 -mt-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto w-full mb-10 relative z-20 -mt-20">
                     {certifications.map((cert, i) => (
                         <motion.div
                             key={i}
@@ -60,7 +59,7 @@ export default function Security() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.5 + i * 0.1 }}
-                            className="bg-[#070B1A] border border-white/10 rounded-2xl p-10 flex flex-col items-center justify-center gap-6 text-center hover:border-white/20 transition-colors py-12"
+                            className="bg-transparent backdrop-blur-xl border border-white/15 rounded-2xl p-10 flex flex-col items-center justify-center gap-6 text-center shadow-[0_24px_80px_rgba(0,0,0,0.18),inset_0_1px_0_rgba(255,255,255,0.04)] hover:border-neon-green/30 transition-colors py-12"
                         >
                             <div className="w-16 h-16 rounded-full bg-[#0A2F15] flex items-center justify-center border border-neon-green/20">
                                 {cert.icon}

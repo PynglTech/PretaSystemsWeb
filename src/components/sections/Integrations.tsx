@@ -131,7 +131,7 @@ const CommunicationBadge = () => (
                 fontWeight="700"
                 fontFamily="JetBrains Mono, monospace"
                 textAnchor="middle"
-                style={{ textTransform: 'uppercase', letterSpacing: '0.02em' }}
+                style={{ letterSpacing: '0.02em' }}
             >
                 Communication
             </text>
@@ -244,7 +244,7 @@ const CategoryLabel = ({ label, color = "green", isMobile = false, showArrow = f
                 style={{ backgroundColor: style.bg, borderColor: style.border }}
             >
                 <div className={`${isMobile ? 'w-1 h-1' : 'w-1.5 h-1.5'} rounded-full ${color === 'green' ? 'bg-[#10B981]' : color === 'yellow' ? 'bg-[#FACC15]' : 'bg-white'}`}></div>
-                <span className={`${isMobile ? 'text-[8px]' : 'text-[10px]'} font-bold uppercase tracking-wide whitespace-nowrap`} style={{ color: style.text }}>{label}</span>
+                <span className={`${isMobile ? 'text-[8px]' : 'text-[10px]'} font-bold tracking-wide whitespace-nowrap`} style={{ color: style.text }}>{label}</span>
             </div>
         </div>
     );
@@ -492,11 +492,10 @@ const IntegrationsDesktop = () => {
                                     lineHeight: '60px',
                                     letterSpacing: '-0.7px',
                                     textAlign: 'center',
-                                    textTransform: 'capitalize',
                                     color: '#FFFFFF'
                                 }}
                             >
-                                One <span style={{ textTransform: 'lowercase' }}>platform</span> Your entire stack.
+                                One <span style={{ textTransform: 'lowercase' }}>platform</span> your entire stack.
                             </motion.h2>
                             <motion.p
                                 initial={{ opacity: 0, y: 20 }}
@@ -683,11 +682,10 @@ const IntegrationsMobile = () => {
                         lineHeight: '40px',
                         letterSpacing: '-0.7px',
                         textAlign: 'center',
-                        textTransform: 'capitalize',
                         color: '#FFFFFF'
                     }}
                 >
-                    One <span style={{ textTransform: 'lowercase' }}>platform</span> Your entire stack.
+                    One <span style={{ textTransform: 'lowercase' }}>platform</span> your entire stack.
                 </motion.h2>
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}

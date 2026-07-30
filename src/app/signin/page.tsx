@@ -3,10 +3,12 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { MoveLeft, Eye } from "lucide-react";
+import { MoveLeft, Eye, EyeOff } from "lucide-react";
 import AuthBackground from "@/components/auth/AuthBackground";
 
 export default function SignInPage() {
+    const [showPassword, setShowPassword] = React.useState(false);
+
     return (
         <main className="relative min-h-screen w-full bg-deep-void font-inter-tight overflow-hidden">
             {/* Background */}
@@ -60,15 +62,20 @@ export default function SignInPage() {
                                 </label>
                                 <div className="relative">
                                     <input
-                                        type="password"
+                                        type={showPassword ? "text" : "password"}
                                         placeholder="Enter your password"
                                         className="w-full bg-[#111113] rounded-xl px-5 py-4 text-white placeholder:text-zinc-600 focus:outline-none focus:ring-1 focus:ring-[#39FF14]/30 transition-all font-medium pr-12"
                                     />
                                     <button
                                         type="button"
+                                        onClick={() => setShowPassword(!showPassword)}
                                         className="absolute right-4 top-1/2 -translate-y-1/2 text-zinc-600 hover:text-zinc-400 transition-colors"
                                     >
-                                        <Eye className="w-5 h-5" />
+                                        {showPassword ? (
+                                            <EyeOff className="w-5 h-5" />
+                                        ) : (
+                                            <Eye className="w-5 h-5" />
+                                        )}
                                     </button>
                                 </div>
 

@@ -74,14 +74,14 @@ export default function PreloaderDecryption() {
                     className="fixed inset-0 z-[100] bg-[#070B1A] flex flex-col items-center justify-center font-jetbrains-mono cursor-none"
                 >
                     {/* Background Grid Elements (Subtle) */}
-                    <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
+                    {/* <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
                         <div className="absolute top-10 left-10 text-[10px] text-neon-green/40 animate-pulse">
                             ENCRYPTION_LAYER: AES-256
                         </div>
                         <div className="absolute bottom-10 right-10 text-[10px] text-neon-green/40 animate-pulse delay-75">
                             KEY_EXCHANGE: ED25519
                         </div>
-                    </div>
+                    </div> */}
 
                     {/* Main Decryption Text */}
                     <div className="relative z-10 flex flex-col items-center gap-2">

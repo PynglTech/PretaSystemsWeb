@@ -161,11 +161,11 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 1.0, duration: 0.8 }}
-                    className="text-white/90 text-sm md:text-lg lg:text-xl max-w-4xl px-6 md:px-6 mb-6 md:mb-10 font-light leading-relaxed"
+                    className="text-white/90 text-sm md:text-base lg:text-lg max-w-5xl px-6 md:px-6 mb-6 md:mb-10 font-light leading-relaxed"
                 >
-                    The 'Ghost' SDK lets Product Managers inject native buttons, modals, and banners to validate{" "}
+                    The 'Ghost' SDK lets Product Managers inject native buttons, modals, and banners to{" "}
                     <br className="hidden md:block" />
-                    demand. Invisible to the user, governed by the enterprise
+                    validate demand. Invisible to the user, governed by the enterprise
                 </motion.p>
 
                 {/* Buttons - optimized for mobile touch */}
@@ -175,34 +175,32 @@ export default function Hero() {
                     transition={{ delay: 1.2, duration: 0.8 }}
                     className="flex flex-col sm:flex-row items-center gap-3 md:gap-6"
                 >
-                    <MagneticButton strength={0.2} onClick={() => {
-                        console.log("Request access button clicked - Scrolling to pricing");
-                        const pricingSection = document.getElementById('pricing');
-                        if (pricingSection) {
-                            pricingSection.scrollIntoView({ behavior: 'smooth' });
-                        }
-                    }}>
-                        <button
-                            type="button"
-                            className="px-8 md:px-10 py-3.5 md:py-4 rounded-full bg-neon-green text-black font-bold font-inter-tight text-lg md:text-xl hover:bg-white transition-all duration-300 shadow-[0_0_20px_rgba(57,255,20,0.3)] hover:shadow-[0_0_30px_rgba(57,255,20,0.5)] min-w-[220px] sm:min-w-[200px]"
-                        >
-                            Request access
-                        </button>
-                    </MagneticButton>
+                    <button
+                        type="button"
+                        onClick={() => {
+                            console.log("Request access button clicked - Scrolling to pricing");
+                            const pricingSection = document.getElementById('pricing');
+                            if (pricingSection) {
+                                pricingSection.scrollIntoView({ behavior: 'smooth' });
+                            }
+                        }}
+                        className="px-5 md:px-6 py-2 md:py-2.5 rounded-full bg-neon-green text-black font-bold font-inter-tight text-sm md:text-base hover:bg-white transition-all duration-300 shadow-[0_0_15px_rgba(57,255,20,0.2)] hover:shadow-[0_0_25px_rgba(57,255,20,0.4)] min-w-[140px] sm:min-w-[150px]"
+                    >
+                        Request access
+                    </button>
 
 
-                    <MagneticButton strength={0.2} onClick={() => {
-                        console.log("View sandbox button clicked - Opening Browser Mockup");
-                        setIsSandboxOpen(true);
-                    }}>
-                        <button
-                            type="button"
-                            className="px-8 md:px-10 py-3.5 md:py-4 rounded-full border border-white/20 text-neon-green font-bold font-inter-tight text-lg md:text-xl hover:bg-white/5 transition-all duration-300 flex items-center justify-center gap-3 group min-w-[220px] sm:min-w-[200px]"
-                        >
-                            View sandbox
-                            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                        </button>
-                    </MagneticButton>
+                    <button
+                        type="button"
+                        onClick={() => {
+                            console.log("View sandbox button clicked - Opening Browser Mockup");
+                            setIsSandboxOpen(true);
+                        }}
+                        className="px-5 md:px-6 py-2 md:py-2.5 rounded-full border border-white/20 text-neon-green font-bold font-inter-tight text-sm md:text-base hover:bg-white/5 transition-all duration-300 flex items-center justify-center gap-2 group min-w-[140px] sm:min-w-[150px]"
+                    >
+                        View sandbox
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </button>
                 </motion.div>
             </div>
 

@@ -7,7 +7,7 @@ import {
     Percent, Globe, ExternalLink, BarChart3, Clock, UserCheck,
     FlaskConical, CreditCard, MapPin, Building2, UserPlus, User,
     Smartphone as Mobile, Monitor, Search, Smartphone, Github, Cloud,
-    Trash2, Trophy
+    Trash2, Trophy, Zap, Ghost, XCircle
 } from "lucide-react";
 
 // --- ANTI-GRAVITY GRAPH (Step 03 Logic) ---
@@ -123,6 +123,33 @@ const AdobeIcon = (props: any) => <svg viewBox="0 0 24 24" fill="currentColor" {
 const SegmentIcon = (props: any) => <svg viewBox="0 0 24 24" fill="currentColor" {...props}><path d="M17.5 14l3.5 3.5-3.5 3.5-3.5-3.5 3.5-3.5zm-11 0l3.5 3.5-3.5 3.5L3 17.5 6.5 14zm5.5-5.5L15.5 12l-3.5 3.5L8.5 12 12 8.5zm0-8.5L15.5 3.5l-3.5 3.5L8.5 3.5 12 0z" /></svg>;
 const GitlabIcon = (props: any) => <svg viewBox="0 0 24 24" fill="currentColor" {...props}><path d="M22.65 14.39L12 22.13 1.35 14.39a.84.84 0 01-.3-.94l1.22-3.72L12 15.3l9.73-5.57 1.22 3.72a.84.84 0 01-.3.94zM12 2.13l3.16 9.67H8.84L12 2.13z" /></svg>;
 const GithubIcon = (props: any) => <svg viewBox="0 0 24 24" fill="currentColor" {...props}><path d="M12 .3a12.1 12.1 0 00-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.9 1.2 1.9 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.3-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.4.3.8 1.1.8 2.2V23c0 .3.2.7.8.6A12.1 12.1 0 0012 .3z" /></svg>;
+const ConnectIcon = (props: any) => (
+    <svg width="23" height="18" viewBox="0 0 23 18" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+        <g clipPath="url(#clip0_1035_1335)">
+            <path d="M20.3834 9.41288C22.3697 7.42655 22.3697 4.20975 20.3834 2.22342C18.6256 0.465612 15.8553 0.237096 13.8338 1.68202L13.7775 1.72069C13.2713 2.0828 13.1553 2.78592 13.5174 3.28866C13.8795 3.79139 14.5826 3.91092 15.0854 3.54881L15.1416 3.51014C16.2701 2.70506 17.8135 2.83163 18.7908 3.81249C19.8982 4.91991 19.8982 6.71288 18.7908 7.8203L14.8463 11.7719C13.7389 12.8793 11.9459 12.8793 10.8385 11.7719C9.85762 10.791 9.73105 9.24764 10.5361 8.12264L10.5748 8.06639C10.9369 7.56014 10.8174 6.85702 10.3146 6.49842C9.81191 6.13983 9.10527 6.25585 8.74668 6.75858L8.70801 6.81483C7.25957 8.8328 7.48809 11.6031 9.2459 13.3609C11.2322 15.3473 14.449 15.3473 16.4354 13.3609L20.3834 9.41288ZM2.11621 8.59022C0.129883 10.5765 0.129883 13.7933 2.11621 15.7797C3.87402 17.5375 6.64434 17.766 8.66582 16.3211L8.72207 16.2824C9.22832 15.9203 9.34434 15.2172 8.98223 14.7144C8.62012 14.2117 7.91699 14.0922 7.41426 14.4543L7.35801 14.493C6.22949 15.298 4.68613 15.1715 3.70879 14.1906C2.60137 13.0797 2.60137 11.2867 3.70879 10.1793L7.65332 6.23124C8.76074 5.12382 10.5537 5.12382 11.6611 6.23124C12.642 7.2121 12.7686 8.75546 11.9635 9.88397L11.9248 9.94022C11.5627 10.4465 11.6822 11.1496 12.185 11.5082C12.6877 11.8668 13.3943 11.7508 13.7529 11.248L13.7916 11.1918C15.24 9.1703 15.0115 6.39999 13.2537 4.64217C11.2674 2.65585 8.05059 2.65585 6.06426 4.64217L2.11621 8.59022Z" fill="currentColor" />
+        </g>
+        <defs>
+            <clipPath id="clip0_1035_1335">
+                <path d="M0 0H22.5V18H0V0Z" fill="white" />
+            </clipPath>
+        </defs>
+    </svg>
+);
+const PillIcon = (props: any) => (
+    <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+        <path d="M6.1875 9.625H1.375V4.8125H2.40625V3.4375H1.375C0.616602 3.4375 0 4.0541 0 4.8125V9.625C0 10.3834 0.616602 11 1.375 11H6.1875C6.9459 11 7.5625 10.3834 7.5625 9.625V8.59375H6.1875V9.625ZM4.8125 7.5625H9.625C10.3834 7.5625 11 6.9459 11 6.1875V1.375C11 0.616602 10.3834 0 9.625 0H4.8125C4.0541 0 3.4375 0.616602 3.4375 1.375V6.1875C3.4375 6.9459 4.0541 7.5625 4.8125 7.5625Z" fill="currentColor" />
+    </svg>
+);
+const VisualIcon = (props: any) => (
+    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+        <path d="M11.25 0.751223C11.25 0.448912 11.0672 0.174723 10.7859 0.0575485C10.5047 -0.0596263 10.1836 0.00599162 9.96797 0.21925L8.9461 1.24336C7.82109 2.36823 6.29531 3.00098 4.70391 3.00098H4.5H3.75H1.5C0.672656 3.00098 0 3.67356 0 4.50082V6.75057C0 7.57782 0.672656 8.25041 1.5 8.25041V11.2501C1.5 11.6649 1.83516 12 2.25 12H3.75C4.16484 12 4.5 11.6649 4.5 11.2501V8.25041H4.70391C6.29531 8.25041 7.82109 8.88315 8.9461 10.008L9.96797 11.0298C10.1836 11.2454 10.5047 11.3087 10.7859 11.1915C11.0672 11.0743 11.25 10.8025 11.25 10.4978V7.04116C11.6859 6.83494 12 6.27953 12 5.62569C12 4.97186 11.6859 4.41645 11.25 4.21022V0.751223ZM9.75 2.54868V5.62569V8.7027C8.37187 7.44893 6.57422 6.75057 4.70391 6.75057H4.5V4.50082H4.70391C6.57422 4.50082 8.37187 3.80245 9.75 2.54868Z" fill="currentColor" />
+    </svg>
+);
+const ListDetailsIcon = (props: any) => (
+    <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+        <path d="M1.375 0C0.616602 0 0 0.640625 0 1.42857V8.57143C0 9.35938 0.616602 10 1.375 10H9.625C10.3834 10 11 9.35938 11 8.57143V1.42857C11 0.640625 10.3834 0 9.625 0H1.375ZM2.0625 1.42857H8.9375C9.31777 1.42857 9.625 1.74777 9.625 2.14286C9.625 2.53795 9.31777 2.85714 8.9375 2.85714H2.0625C1.68223 2.85714 1.375 2.53795 1.375 2.14286C1.375 1.74777 1.68223 1.42857 2.0625 1.42857Z" fill="currentColor" />
+    </svg>
+);
 
 const CONNECT_ICONS = [
     // Row 1
@@ -147,7 +174,7 @@ const FeatureRow = ({
     title: string, subtitle: string, description: string, icon: any, visual: React.ReactNode, reverse?: boolean
 }) => {
     return (
-        <div className={`flex flex-col ${reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-12 lg:gap-32 py-12 lg:py-24 min-h-[500px] lg:min-h-[520px]`} style={{ contain: 'layout' }}>
+        <div className={`flex flex-col ${reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-12 lg:gap-32 py-8 lg:py-12 min-h-[500px] lg:min-h-[520px]`} style={{ contain: 'layout' }}>
             {/* Content Side */}
             <motion.div
                 initial={{ opacity: 0, x: reverse ? 40 : -40, y: 20 }}
@@ -249,7 +276,7 @@ export default function ShipExperiments() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-center mb-16 md:mb-32"
+                    className="text-center mb-0 md:mb-2"
                 >
                     <h2
                         style={{
@@ -259,7 +286,7 @@ export default function ShipExperiments() {
                             lineHeight: '58px',
                             letterSpacing: '-0.5px',
                             textAlign: 'center',
-                            textTransform: 'capitalize',
+                            textTransform: 'none',
                             color: '#FFFFFF'
                         }}
                     >
@@ -275,7 +302,7 @@ export default function ShipExperiments() {
                     {/* Row 1: Connect */}
                     <div className="relative">
                         <FeatureRow
-                            icon={Link}
+                            icon={ConnectIcon}
                             title="Connect"
                             subtitle="Sync your stack."
                             description="Integrate your existing repo and design files. Preta maps your UI components instantly."
@@ -333,12 +360,12 @@ export default function ShipExperiments() {
                                 description: 'Spin up a lightweight variant of your feature. Target specific user personas with a few clicks.'
                             },
                             image: {
-                                title: "Creative Variants",
+                                title: "Creative variants",
                                 subtitle: "A/B test assets.",
                                 description: 'Swap images and banners instantly. See what resonates best with your audience across different segments.'
                             },
                             list: {
-                                title: "Feature Flags",
+                                title: "Feature flags",
                                 subtitle: "Toggle with confidence.",
                                 description: 'Enable or disable features for specific users. Roll back instantly if metrics don\'t meet expectations.'
                             },
@@ -348,7 +375,7 @@ export default function ShipExperiments() {
                                 description: 'Customize the experience for high-value segments. Deliver exclusive features to your most engaged users.'
                             },
                             persona: {
-                                title: "Persona Target",
+                                title: "Persona target",
                                 subtitle: "Segment your users.",
                                 description: 'Intelligent segmentation that feels automatic. Deliver unique experiences based on behavior and intent.'
                             }
@@ -555,9 +582,9 @@ export default function ShipExperiments() {
                                         <div className="w-full h-full flex items-stretch" onMouseEnter={handleInteraction}>
                                             <div className="w-12 md:w-16 flex flex-col items-center justify-center p-2 md:p-4 gap-2 md:gap-3 bg-black/20 border-r border-white/5">
                                                 {[
-                                                    { id: 'simple', icon: Link },
-                                                    { id: 'detailed', icon: Monitor },
-                                                    { id: 'list', icon: LayoutList }
+                                                    { id: 'simple', icon: PillIcon },
+                                                    { id: 'detailed', icon: VisualIcon },
+                                                    { id: 'list', icon: ListDetailsIcon }
                                                 ].map((item) => (
                                                     <motion.button
                                                         key={item.id}
@@ -587,146 +614,157 @@ export default function ShipExperiments() {
                                                             className="flex flex-col items-center w-full"
                                                         >
                                                             {step4View === 'simple' ? (
-                                                                <>
+                                                                <div className="flex flex-col items-center w-full scale-[0.7] sm:scale-[0.85] lg:scale-100 origin-center">
                                                                     {/* Top Node */}
-                                                                    <div className="relative group">
-                                                                        <div className="bg-[#6366f1]/10 border border-[#6366f1]/20 rounded-2xl p-4 md:p-6 flex flex-col items-center min-w-[140px] md:min-w-[180px] backdrop-blur-md shadow-2xl transition-all hover:border-[#6366f1]/40">
-                                                                            <Eye className="w-5 h-5 text-[#6366f1] mb-2 md:mb-3" />
-                                                                            <div className="text-white font-jetbrains-mono text-xs md:text-sm font-bold tracking-tight">
-                                                                                142.8k <span className="text-gray-400 font-normal">users</span>
+                                                                    <div className="relative flex items-center justify-center w-full">
+                                                                        <div className="absolute right-[calc(50%+90px)] lg:right-[calc(50%+120px)] text-white font-inter text-xs lg:text-base whitespace-nowrap opacity-60">Impressions</div>
+                                                                        <div className="bg-[#0F1021] border border-[#6366f1]/30 rounded-[12px] px-5 py-3 flex items-center gap-3 min-w-[150px] lg:min-w-[190px] shadow-lg">
+                                                                            <Eye className="w-4 h-4 lg:w-5 lg:h-5 text-[#6366f1]" />
+                                                                            <div className="text-[#E2E2E2] font-jetbrains-mono text-base lg:text-xl font-medium tracking-tight">
+                                                                                142.8k <span className="text-[#A1A1AA] font-light text-[10px] lg:text-xs">users</span>
                                                                             </div>
-                                                                            <div className="text-[#6366f1] text-[10px] md:text-[11px] font-bold mt-1 md:mt-2">12.4%</div>
+                                                                            <div className="text-[#6366f1] text-[10px] lg:text-sm font-bold mt-1">12.4%</div>
                                                                         </div>
-                                                                        <div className="hidden md:block absolute right-full mr-8 top-1/2 -translate-y-1/2 text-white/40 text-xs font-medium tracking-wide uppercase">Impressions</div>
                                                                     </div>
 
-                                                                    {/* Connector & CTR Node */}
-                                                                    <div className="flex flex-col items-center">
-                                                                        <div className="bg-[#10B981]/10 border border-[#10B981]/20 px-4 py-2.5 rounded-xl shadow-lg backdrop-blur-sm">
-                                                                            <span className="text-[#10B981] font-jetbrains-mono text-[11px] font-bold tracking-wider">8.72% CTR</span>
-                                                                        </div>
+                                                                    {/* Top Connector */}
+                                                                    <div className="w-[1px] h-6 lg:h-10 bg-[#10B981]/40" />
+
+                                                                    {/* CTR Badge */}
+                                                                    <div className="bg-[#0A1612] border border-[#10B981]/30 px-4 py-1.5 lg:px-5 lg:py-2 rounded-[8px] shadow-sm z-10">
+                                                                        <span className="text-[#39ff14] font-jetbrains-mono text-xs lg:text-sm font-medium">8.72% CTR</span>
                                                                     </div>
+
+                                                                    {/* Bottom Connector */}
+                                                                    <div className="w-[1px] h-6 lg:h-10 bg-white/10" />
 
                                                                     {/* Bottom Node */}
-                                                                    <div className="relative group">
-                                                                        <div className="bg-[#10B981]/10 border border-[#10B981]/20 rounded-2xl p-6 flex flex-col items-center min-w-[180px] backdrop-blur-md shadow-2xl transition-all hover:border-[#10B981]/40">
-                                                                            <MousePointer2 className="w-5 h-5 text-[#10B981] mb-3 fill-[#10B981]/10" />
-                                                                            <div className="text-white font-jetbrains-mono text-sm font-bold tracking-tight">
-                                                                                12.4k <span className="text-gray-400 font-normal">users</span>
+                                                                    <div className="relative flex items-center justify-center w-full">
+                                                                        <div className="absolute right-[calc(50%+90px)] lg:right-[calc(50%+120px)] text-white font-inter text-xs lg:text-base whitespace-nowrap opacity-60">Clicked</div>
+                                                                        <div className="bg-[#0A1612] border border-[#10B981]/30 rounded-[12px] px-5 py-3 flex items-center gap-3 min-w-[150px] lg:min-w-[190px] shadow-lg">
+                                                                            <MousePointer2 className="w-4 h-4 lg:w-5 lg:h-5 text-[#10B981] fill-[#10B981]" />
+                                                                            <div className="text-[#E2E2E2] font-jetbrains-mono text-base lg:text-xl font-medium tracking-tight">
+                                                                                12.4k <span className="text-[#A1A1AA] font-light text-[10px] lg:text-xs">users</span>
                                                                             </div>
-                                                                            <div className="text-[#10B981] text-[11px] font-bold mt-2">8.1%</div>
+                                                                            <div className="text-[#10B981] text-[10px] lg:text-sm font-bold mt-1">8.1%</div>
                                                                         </div>
-                                                                        <div className="absolute right-full mr-8 top-1/2 -translate-y-1/2 text-white/40 text-xs font-medium tracking-wide uppercase">Clicked</div>
                                                                     </div>
-                                                                </>
+                                                                </div>
                                                             ) : step4View === 'detailed' ? (
-                                                                <div className="flex flex-col items-center w-full gap-0">
+                                                                <div className="flex flex-col items-center w-full scale-[0.6] sm:scale-[0.75] lg:scale-[0.9] origin-center">
                                                                     {/* Banner Impression */}
-                                                                    <div className="relative w-full flex justify-center">
-                                                                        <div className="absolute right-full mr-8 top-1/2 -translate-y-1/2 text-white/40 text-[10px] font-bold uppercase whitespace-nowrap">Banner impression</div>
-                                                                        <div className="bg-[#6366f1]/10 border border-[#6366f1]/20 rounded-2xl px-12 py-4 flex items-center gap-4 min-w-[220px]">
-                                                                            <Eye className="w-5 h-5 text-[#6366f1]" />
-                                                                            <span className="text-white font-jetbrains-mono text-lg font-bold">128.5k</span>
+                                                                    <div className="relative flex items-center justify-center w-full">
+                                                                        <div className="absolute right-[calc(50%+85px)] md:right-[calc(50%+100px)] text-white font-inter text-[10px] md:text-xs lg:text-sm whitespace-nowrap opacity-60">Banner impression</div>
+                                                                        <div className="bg-[#0F1021] border border-[#6366f1]/30 rounded-[10px] px-4 py-2 flex items-center gap-2 min-w-[125px] lg:min-w-[160px] shadow-md">
+                                                                            <Eye className="w-4 h-4 text-[#6366f1]" />
+                                                                            <span className="text-[#6366f1] font-jetbrains-mono text-sm lg:text-base font-bold">128.5k</span>
                                                                         </div>
                                                                     </div>
 
-                                                                    {/* Connector */}
-                                                                    <div className="flex flex-col items-center py-4">
-                                                                        <div className="bg-[#10B981]/10 border border-[#10B981]/20 px-3 py-1 rounded-lg">
-                                                                            <span className="text-[#10B981] text-[10px] font-bold">14.2% CR</span>
-                                                                        </div>
+                                                                    {/* Top Connector */}
+                                                                    <div className="w-[1px] h-4 lg:h-6 bg-[#10B981]/40" />
+
+                                                                    {/* CR Badge */}
+                                                                    <div className="bg-[#0A1612] border border-[#10B981]/30 px-3 py-1 rounded-[6px] shadow-sm z-10">
+                                                                        <span className="text-[#39ff14] font-jetbrains-mono text-[9px] lg:text-[11px] font-medium">14.2% CR</span>
                                                                     </div>
+
+                                                                    {/* Second Connector */}
+                                                                    <div className="w-[1px] h-4 lg:h-6 bg-white/10" />
 
                                                                     {/* Action Completed */}
-                                                                    <div className="relative w-full flex justify-center">
-                                                                        <div className="absolute right-full mr-8 top-1/2 -translate-y-1/2 text-white/40 text-[10px] font-bold uppercase whitespace-nowrap">Action completed</div>
-                                                                        <div className="bg-[#10B981]/10 border border-[#10B981]/20 rounded-2xl px-12 py-4 flex items-center gap-4 min-w-[220px]">
-                                                                            <div className="w-5 h-5 flex items-center justify-center">
-                                                                                <div className="w-3 h-3 bg-[#39ff14] shadow-[0_0_10px_#39ff14] rounded-sm" />
-                                                                            </div>
-                                                                            <span className="text-[#39ff14] font-jetbrains-mono text-lg font-bold">18K</span>
+                                                                    <div className="relative flex items-center justify-center w-full">
+                                                                        <div className="absolute right-[calc(50%+85px)] md:right-[calc(50%+100px)] text-white font-inter text-[10px] md:text-xs lg:text-sm whitespace-nowrap opacity-60">Action completed</div>
+                                                                        <div className="bg-[#0A1612] border border-[#10B981]/30 rounded-[10px] px-4 py-2 flex items-center gap-2 min-w-[125px] lg:min-w-[160px] shadow-md">
+                                                                            <Zap className="w-4 h-4 text-[#39ff14] fill-[#39ff14]/20" />
+                                                                            <span className="text-[#39ff14] font-jetbrains-mono text-sm lg:text-base font-bold">18K</span>
                                                                         </div>
                                                                     </div>
 
-                                                                    <div className="h-6" />
+                                                                    {/* Third Connector */}
+                                                                    <div className="w-[1px] h-4 lg:h-6 bg-white/10" />
 
                                                                     {/* Banner Dismissed */}
-                                                                    <div className="relative w-full flex justify-center">
-                                                                        <div className="absolute right-full mr-8 top-1/2 -translate-y-1/2 text-white/40 text-[10px] font-bold uppercase whitespace-nowrap">Banner Dismissed</div>
-                                                                        <div className="bg-[#ef4444]/10 border border-[#ef4444]/20 rounded-2xl px-12 py-4 flex items-center gap-4 min-w-[220px]">
-                                                                            <div className="w-5 h-5 flex items-center justify-center bg-[#ef4444] rounded-full">
-                                                                                <span className="text-white text-[10px] font-bold">×</span>
-                                                                            </div>
-                                                                            <span className="text-[#ef4444] font-jetbrains-mono text-lg font-bold">4K</span>
+                                                                    <div className="relative flex items-center justify-center w-full">
+                                                                        <div className="absolute right-[calc(50%+85px)] md:right-[calc(50%+100px)] text-white font-inter text-[10px] md:text-xs lg:text-sm whitespace-nowrap opacity-60">Banner Dismissed</div>
+                                                                        <div className="bg-[#1A1010] border border-[#ef4444]/30 rounded-[10px] px-4 py-2 flex items-center gap-2 min-w-[125px] lg:min-w-[160px] shadow-md">
+                                                                            <XCircle className="w-4 h-4 text-[#ef4444] fill-[#ef4444]/20" />
+                                                                            <span className="text-[#ef4444] font-jetbrains-mono text-sm lg:text-base font-bold">4K</span>
                                                                         </div>
                                                                     </div>
 
-                                                                    <div className="h-6" />
+                                                                    {/* Fourth Connector */}
+                                                                    <div className="w-[1px] h-4 lg:h-6 bg-white/10" />
 
                                                                     {/* Ignored */}
-                                                                    <div className="relative w-full flex justify-center">
-                                                                        <div className="absolute right-full mr-8 top-1/2 -translate-y-1/2 text-white/40 text-[10px] font-bold uppercase whitespace-nowrap">Ignored</div>
-                                                                        <div className="bg-white/5 border border-white/10 rounded-2xl px-12 py-4 flex items-center gap-4 min-w-[220px]">
-                                                                            <div className="w-5 h-5 flex items-center justify-center opacity-40">
-                                                                                <svg viewBox="0 0 24 24" className="w-4 h-4 fill-white"><path d="M12 2a9 9 0 00-9 9c0 1.94.62 3.74 1.67 5.2a1 1 0 00.17.2l.01.01c.21.2.22.56.02.77l-1.6 1.6a1 1 0 00.5 1.5l1.6-.2a1 1 0 00.8-.8l.2-1.6a1 1 0 01.1-.5l.02-.02a9 9 0 1014.5-6.17z" /></svg>
-                                                                            </div>
-                                                                            <span className="text-white/40 font-jetbrains-mono text-lg font-bold">1.6K</span>
+                                                                    <div className="relative flex items-center justify-center w-full">
+                                                                        <div className="absolute right-[calc(50%+85px)] md:right-[calc(50%+100px)] text-white font-inter text-[10px] md:text-xs lg:text-sm whitespace-nowrap opacity-60">Ignored</div>
+                                                                        <div className="bg-[#1A1A1A] border border-white/10 rounded-[10px] px-4 py-2 flex items-center gap-2 min-w-[125px] lg:min-w-[160px] shadow-md">
+                                                                            <Ghost className="w-4 h-4 text-gray-400 fill-gray-400/10" />
+                                                                            <span className="text-gray-400 font-jetbrains-mono text-sm lg:text-base font-bold">1.6K</span>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             ) : (
-                                                                <div className="flex flex-col items-center w-full gap-0">
+                                                                <div className="flex flex-col items-center w-full scale-[0.6] sm:scale-[0.75] lg:scale-[0.9] origin-center -translate-y-4">
                                                                     {/* Modal Impression */}
-                                                                    <div className="relative w-full flex justify-center">
-                                                                        <div className="absolute right-full mr-8 top-1/2 -translate-y-1/2 text-white/40 text-[10px] font-bold uppercase whitespace-nowrap">Modal impression</div>
-                                                                        <div className="bg-[#6366f1]/10 border border-[#6366f1]/20 rounded-2xl px-12 py-4 flex items-center gap-4 min-w-[220px]">
-                                                                            <Eye className="w-5 h-5 text-[#6366f1]" />
-                                                                            <span className="text-white font-jetbrains-mono text-lg font-bold">128.4k</span>
+                                                                    <div className="relative flex items-center justify-center w-full">
+                                                                        <div className="absolute right-[calc(50%+85px)] md:right-[calc(50%+100px)] text-white font-inter text-[10px] md:text-xs lg:text-sm whitespace-nowrap opacity-60">Modal impression</div>
+                                                                        <div className="bg-[#0F1021] border border-[#6366f1]/30 rounded-[10px] px-4 py-2 flex items-center gap-2 min-w-[125px] lg:min-w-[160px] shadow-md">
+                                                                            <Eye className="w-4 h-4 text-[#6366f1]" />
+                                                                            <span className="text-[#6366f1] font-jetbrains-mono text-sm lg:text-base font-bold">128.4k</span>
                                                                         </div>
                                                                     </div>
 
-                                                                    {/* Connector & Drop Badge */}
-                                                                    <div className="flex flex-col items-center py-4">
-                                                                        <div className="bg-[#1A1C2E] border border-white/10 px-3 py-1.5 rounded-xl shadow-xl">
-                                                                            <span className="text-gray-400 text-[10px] font-bold">32.8% Drop</span>
-                                                                        </div>
+                                                                    {/* Connector */}
+                                                                    <div className="w-[1px] h-4 lg:h-6 bg-[#10B981]/40" />
+
+                                                                    {/* Drop Badge */}
+                                                                    <div className="bg-[#1C1C24] border border-white/10 px-3 py-1 rounded-[6px] shadow-sm z-10">
+                                                                        <span className="text-gray-400 font-jetbrains-mono text-[9px] lg:text-[11px] font-medium">32.8% Drop</span>
                                                                     </div>
+
+                                                                    {/* Second Connector */}
+                                                                    <div className="w-[1px] h-4 lg:h-6 bg-white/10" />
 
                                                                     {/* Modal Dismissed */}
-                                                                    <div className="relative w-full flex justify-center">
-                                                                        <div className="absolute right-full mr-8 top-1/2 -translate-y-1/2 text-white/40 text-[10px] font-bold uppercase whitespace-nowrap">Modal dismissed</div>
-                                                                        <div className="bg-[#ef4444]/10 border border-[#ef4444]/20 rounded-2xl px-12 py-4 flex items-center gap-4 min-w-[220px]">
-                                                                            <div className="w-5 h-5 flex items-center justify-center bg-[#ef4444] rounded-full">
-                                                                                <span className="text-white text-[10px] font-bold">×</span>
-                                                                            </div>
-                                                                            <span className="text-[#ef4444] font-jetbrains-mono text-lg font-bold">42.1K</span>
+                                                                    <div className="relative flex items-center justify-center w-full">
+                                                                        <div className="absolute right-[calc(50%+85px)] md:right-[calc(50%+100px)] text-white font-inter text-[10px] md:text-xs lg:text-sm whitespace-nowrap opacity-60">Modal dismissed</div>
+                                                                        <div className="bg-[#1A1010] border border-[#ef4444]/30 rounded-[10px] px-4 py-2 flex items-center gap-2 min-w-[125px] lg:min-w-[160px] shadow-md">
+                                                                            <XCircle className="w-4 h-4 text-[#ef4444] fill-[#ef4444]/20" />
+                                                                            <span className="text-[#ef4444] font-jetbrains-mono text-sm lg:text-base font-bold">42.1K</span>
                                                                         </div>
                                                                     </div>
 
-                                                                    {/* Connector & CTR Badge */}
-                                                                    <div className="flex flex-col items-center py-4">
-                                                                        <div className="bg-[#10B981]/10 border border-[#10B981]/20 px-3 py-1.5 rounded-xl">
-                                                                            <span className="text-[#10B981] text-[10px] font-bold">8.72% CTR</span>
-                                                                        </div>
+                                                                    {/* Third Connector */}
+                                                                    <div className="w-[1px] h-4 lg:h-6 bg-white/10" />
+
+                                                                    {/* CTR Badge */}
+                                                                    <div className="bg-[#0A1612] border border-[#10B981]/30 px-3 py-1 rounded-[6px] shadow-sm z-10">
+                                                                        <span className="text-[#10B981] font-jetbrains-mono text-[9px] lg:text-[11px] font-medium">8.72% CTR</span>
                                                                     </div>
+
+                                                                    {/* Fourth Connector */}
+                                                                    <div className="w-[1px] h-4 lg:h-6 bg-white/10" />
 
                                                                     {/* CTA Clicked */}
-                                                                    <div className="relative w-full flex justify-center">
-                                                                        <div className="absolute right-full mr-8 top-1/2 -translate-y-1/2 text-white/40 text-[10px] font-bold uppercase whitespace-nowrap">CTA clicked</div>
-                                                                        <div className="bg-[#10B981]/10 border border-[#10B981]/20 rounded-2xl px-12 py-4 flex items-center gap-4 min-w-[220px]">
-                                                                            <MousePointer2 className="w-5 h-5 text-[#10B981] fill-[#10B981]/10" />
-                                                                            <span className="text-[#10B981] font-jetbrains-mono text-lg font-bold">11K</span>
+                                                                    <div className="relative flex items-center justify-center w-full">
+                                                                        <div className="absolute right-[calc(50%+85px)] md:right-[calc(50%+100px)] text-white font-inter text-[10px] md:text-xs lg:text-sm whitespace-nowrap opacity-60">CTA clicked</div>
+                                                                        <div className="bg-[#0D1A1A] border border-[#10B981]/30 rounded-[10px] px-4 py-2 flex items-center gap-2 min-w-[125px] lg:min-w-[160px] shadow-md">
+                                                                            <MousePointer2 className="w-4 h-4 text-[#00f2ff] fill-[#00f2ff]/20" />
+                                                                            <span className="text-[#00f2ff] font-jetbrains-mono text-sm lg:text-base font-bold">11K</span>
                                                                         </div>
                                                                     </div>
 
-                                                                    <div className="h-6" />
+                                                                    {/* Fifth Connector */}
+                                                                    <div className="w-[1px] h-4 lg:h-6 bg-white/10" />
 
                                                                     {/* Completed */}
-                                                                    <div className="relative w-full flex justify-center">
-                                                                        <div className="absolute right-full mr-8 top-1/2 -translate-y-1/2 text-white/40 text-[10px] font-bold uppercase whitespace-nowrap">Completed</div>
-                                                                        <div className="bg-[#10B981]/15 border border-[#10B981]/30 rounded-2xl px-12 py-4 flex items-center gap-4 min-w-[220px]">
-                                                                            <Trophy className="w-5 h-5 text-[#39ff14] shadow-[0_0_10px_#39ff14]" />
-                                                                            <span className="text-white/60 font-jetbrains-mono text-lg font-bold">1.6K</span>
+                                                                    <div className="relative flex items-center justify-center w-full">
+                                                                        <div className="absolute right-[calc(50%+85px)] md:right-[calc(50%+100px)] text-white font-inter text-[10px] md:text-xs lg:text-sm whitespace-nowrap opacity-60">Completed</div>
+                                                                        <div className="bg-[#0A1612] border border-[#10B981]/30 rounded-[10px] px-4 py-2 flex items-center gap-2 min-w-[125px] lg:min-w-[160px] shadow-md">
+                                                                            <Trophy className="w-4 h-4 text-[#39ff14] fill-[#39ff14]/20" />
+                                                                            <span className="text-[#39ff14] font-jetbrains-mono text-sm lg:text-base font-bold">1.6K</span>
                                                                         </div>
                                                                     </div>
                                                                 </div>

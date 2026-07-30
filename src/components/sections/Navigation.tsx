@@ -41,7 +41,10 @@ export default function Navigation() {
                         src="/Preta-removebg-preview.png"
                         alt="Preta"
                         fill
+                        priority
+                        loading="eager"
                         className="object-contain object-left"
+                        sizes="(max-width: 768px) 112px, 112px"
                     />
                 </Link>
 

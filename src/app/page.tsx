@@ -14,7 +14,7 @@ import Footer from "@/components/sections/Footer";
 
 export default function Home() {
     return (
-        <main className="min-h-screen bg-deep-void selection:bg-neon-green/20">
+        <main className="min-h-screen bg-deep-void selection:bg-neon-green/20 relative">
             <Navigation />
             <Hero />
             <RoiPhilosophy />

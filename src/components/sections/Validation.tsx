@@ -42,7 +42,7 @@ const ValidationCard = ({ title, desc, icon, delay }: { title: string, desc: str
         <div className="absolute inset-0 border border-white/5 rounded-[32px] group-hover:border-neon-green/30 transition-all duration-500" />
 
         {/* Main Card Container */}
-        <div className="relative h-full bg-[#070B1A] rounded-[28px] p-7 md:p-8 flex flex-col aspect-square transition-transform duration-500 group-hover:-translate-y-1">
+        <div className="relative h-full bg-[#070B1A] rounded-[28px] p-7 md:p-8 flex flex-col transition-transform duration-500 group-hover:-translate-y-1">
             {/* Dashed Inner Border */}
             <div className="absolute inset-2 border border-dashed border-white/5 rounded-[22px] pointer-events-none group-hover:border-neon-green/10 transition-colors" />
 
@@ -52,8 +52,8 @@ const ValidationCard = ({ title, desc, icon, delay }: { title: string, desc: str
             </div>
 
             {/* Content */}
-            <div className="relative z-10 flex flex-col justify-center flex-1">
-                <h3 className="text-lg md:text-xl font-jetbrains-mono font-medium text-neon-green mb-3 leading-tight tracking-tight">
+            <div className="relative z-10 flex flex-col pt-2">
+                <h3 className="text-lg md:text-xl font-jetbrains-mono font-medium text-neon-green mb-3 leading-tight tracking-tight min-h-[3rem] md:min-h-[3.5rem] flex items-start">
                     {title}
                 </h3>
                 <p className="font-inter text-xs md:text-sm font-light text-white/90 leading-relaxed opacity-90 group-hover:text-gray-300 transition-colors">
@@ -81,7 +81,7 @@ export default function Validation() {
                         viewport={{ once: true }}
                         className="text-4xl md:text-5xl font-jetbrains-mono font-medium text-white tracking-tight"
                     >
-                        Validation With Zero Risk.
+                        Validation with zero risk.
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0 }}

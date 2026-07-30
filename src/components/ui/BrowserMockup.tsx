@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import Image from "next/image";
 
-import { MousePointer2, Plus, BarChart2, Megaphone, AppWindow, Award, PieChart, SlidersHorizontal, User, Layout, X, Minus, Maximize2, GripVertical, Navigation, Copy, Pencil, Sparkles, Palette, Clock, RotateCcw, Link2, Trash2, ChevronDown, Upload, Heart, MessageSquare, HelpCircle, EyeOff, Scan, Search, CircleDot } from "lucide-react";
+import { MousePointer2, Plus, Megaphone, AppWindow, Award, PieChart, SlidersHorizontal, User, Layout, X, Minus, Maximize2, GripVertical, Navigation, Copy, Pencil, Sparkles, Palette, Clock, RotateCcw, Link2, Trash2, ChevronDown, ChevronRight, Upload, Heart, MessageSquare, HelpCircle, Eye, EyeOff, Scan, Search, CircleDot, Wand2, Move, Image as LucideImage, ArrowLeftRight, Replace, Type, Eraser, Layers, Monitor, Tablet, Smartphone } from "lucide-react";
 
 const CloneIcon = ({ className }: { className?: string }) => (
     <svg
@@ -18,6 +18,74 @@ const CloneIcon = ({ className }: { className?: string }) => (
         className={className}
     >
         <path d="M5.4 8.4H1.2V4.2H2.1V3H1.2C0.538125 3 0 3.53813 0 4.2V8.4C0 9.06188 0.538125 9.6 1.2 9.6H5.4C6.06188 9.6 6.6 9.06188 6.6 8.4V7.5H5.4V8.4ZM4.2 6.6H8.4C9.06188 6.6 9.6 6.06188 9.6 5.4V1.2C9.6 0.538125 9.06188 0 8.4 0H4.2C3.53813 0 3 0.538125 3 1.2V5.4C3 6.06188 3.53813 6.6 4.2 6.6Z" fill="currentColor" />
+    </svg>
+);
+
+const ModalIcon = ({ className }: { className?: string }) => (
+    <svg
+        width="11"
+        height="10"
+        viewBox="0 0 11 10"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className={className}
+    >
+        <path d="M1.375 0C0.616602 0 0 0.640625 0 1.42857V8.57143C0 9.35938 0.616602 10 1.375 10H9.625C10.3834 10 11 9.35938 11 8.57143V1.42857C11 0.640625 10.3834 0 9.625 0H1.375ZM2.0625 1.42857H8.9375C9.31777 1.42857 9.625 1.74777 9.625 2.14286C9.625 2.53795 9.31777 2.85714 8.9375 2.85714H2.0625C1.68223 2.85714 1.375 2.53795 1.375 2.14286C1.375 1.74777 1.68223 1.42857 2.0625 1.42857Z" fill="currentColor" />
+    </svg>
+);
+
+const BadgeIcon = ({ className }: { className?: string }) => (
+    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+        <g clipPath="url(#clip0_badge)">
+            <path d="M4.94627 0.172051C4.80564 0.0243951 4.59471 -0.0318549 4.39783 0.0197076C4.20096 0.0712701 4.04861 0.228301 3.99705 0.425176L3.62674 1.89002L2.17361 1.47986C1.97674 1.42361 1.7658 1.47986 1.62283 1.62283C1.47986 1.7658 1.42361 1.97674 1.47986 2.17361L1.89002 3.62674L0.425176 3.99939C0.228301 4.04861 0.0736138 4.2033 0.0197076 4.40018C-0.0341987 4.59705 0.0243951 4.80564 0.172051 4.94627L1.25486 6.00096L0.172051 7.05564C0.0243951 7.19627 -0.0318549 7.40721 0.0197076 7.60408C0.0712701 7.80096 0.228301 7.9533 0.425176 8.00486L1.89002 8.37518L1.47986 9.8283C1.42361 10.0252 1.47986 10.2361 1.62283 10.3791C1.7658 10.5221 1.97674 10.5783 2.17361 10.522L3.62674 10.1119L3.99705 11.5767C4.04627 11.7736 4.20096 11.9283 4.39783 11.9822C4.59471 12.0361 4.8033 11.9775 4.94627 11.8322L6.00096 10.7494L7.05564 11.8322C7.19861 11.9775 7.40721 12.0361 7.60408 11.9822C7.80096 11.9283 7.9533 11.7736 8.00486 11.5767L8.37518 10.1119L9.8283 10.522C10.0252 10.5783 10.2361 10.5221 10.3791 10.3791C10.5221 10.2361 10.5783 10.0252 10.522 9.8283L10.1119 8.37518L11.5767 8.00486C11.7736 7.95564 11.9283 7.80096 11.9822 7.60408C12.0361 7.40721 11.9775 7.19861 11.8322 7.05564L10.7494 6.00096L11.8322 4.94627C11.9775 4.8033 12.0361 4.59471 11.9822 4.39783C11.9283 4.20096 11.7736 4.04861 11.5767 3.99705L10.1119 3.62674L10.522 2.17361C10.5783 1.97674 10.5221 1.7658 10.3791 1.62283C10.2361 1.47986 10.0252 1.42361 9.8283 1.47986L8.37518 1.89002L8.00252 0.425176C7.9533 0.228301 7.79861 0.0736138 7.60174 0.0197076C7.40486 -0.0341987 7.19627 0.0243951 7.05564 0.172051L6.00096 1.25486L4.94627 0.172051Z" fill="currentColor" />
+        </g>
+        <defs>
+            <clipPath id="clip0_badge">
+                <path d="M0 0H12V12H0V0Z" fill="white" />
+            </clipPath>
+        </defs>
+    </svg>
+);
+
+const FloatIcon = ({ className }: { className?: string }) => (
+    <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+        <path d="M5.86811 1.83307C5.86811 1.42737 5.54034 1.09961 5.13465 1.09961C4.72896 1.09961 4.4012 1.42737 4.4012 1.83307V5.13362H1.10064C0.694951 5.13362 0.367188 5.46138 0.367188 5.86707C0.367188 6.27277 0.694951 6.60053 1.10064 6.60053H4.4012V9.90108C4.4012 10.3068 4.72896 10.6345 5.13465 10.6345C5.54034 10.6345 5.86811 10.3068 5.86811 9.90108V6.60053H9.16866C9.57435 6.60053 9.90211 6.27277 9.90211 5.86707C9.90211 5.46138 9.57435 5.13362 9.16866 5.13362H5.86811V1.83307Z" fill="currentColor" />
+    </svg>
+);
+
+const ImageIcon = ({ className }: { className?: string }) => (
+    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+        <path d="M3.5585 0H6.1915C6.7375 0 7.1705 -3.91155e-08 7.519 0.0285C7.876 0.0575 8.1775 0.1185 8.4535 0.2585C8.90032 0.486422 9.26351 0.84996 9.491 1.297C9.6315 1.572 9.6925 1.874 9.7215 2.231C9.75 2.5795 9.75 3.0125 9.75 3.5585V6.1915C9.75 6.7375 9.75 7.1705 9.7215 7.519C9.6925 7.876 9.6315 8.1775 9.4915 8.4535C9.26371 8.90024 8.90035 9.26342 8.4535 9.491C8.1775 9.6315 7.876 9.6925 7.519 9.7215C7.1705 9.75 6.7375 9.75 6.1915 9.75H3.5585C3.0125 9.75 2.5795 9.75 2.231 9.7215C1.874 9.6925 1.5725 9.6315 1.297 9.4915C0.850069 9.26379 0.486707 8.90043 0.259 8.4535C0.1185 8.1775 0.0575 7.876 0.029 7.519C4.47035e-08 7.1705 0 6.7375 0 6.1915V3.5585C0 3.0125 -3.91155e-08 2.5795 0.0285 2.231C0.0575 1.874 0.1185 1.5725 0.2585 1.297C0.486337 0.849993 0.849884 0.486622 1.297 0.259C1.572 0.1185 1.874 0.0575 2.231 0.0285C2.5795 -3.91155e-08 3.0125 0 3.5585 0ZM0.75 5.7515V6.175C0.75 6.7415 0.75 7.1435 0.776 7.458C0.801 7.768 0.8495 7.9605 0.927 8.113C1.08278 8.41868 1.33132 8.66722 1.637 8.823C1.7895 8.9005 1.982 8.9485 2.292 8.974C2.4865 8.99 2.7145 8.996 2.994 8.9985C2.971 8.3025 3.0775 7.6435 3.2905 7.0385C2.7305 6.2355 1.8 5.718 0.75 5.7515ZM9.0005 4.2095C6.069 3.963 3.637 6.1465 3.745 9H6.175C6.7415 9 7.1435 9 7.458 8.974C7.768 8.949 7.9605 8.9005 8.113 8.823C8.41868 8.66722 8.66722 8.41868 8.823 8.113C8.9005 7.9605 8.9485 7.768 8.974 7.458C9 7.143 9 6.741 9 6.175L9.0005 4.2095ZM1.75 2.875C1.75 3.23967 1.89487 3.58941 2.15273 3.84727C2.41059 4.10513 2.76033 4.25 3.125 4.25C3.48967 4.25 3.83941 4.10513 4.09727 3.84727C4.35513 3.58941 4.5 3.23967 4.5 2.875C4.5 2.51033 4.35513 2.16059 4.09727 1.90273C3.83941 1.64487 3.48967 1.5 3.125 1.5C2.76033 1.5 2.41059 1.64487 2.15273 1.90273C1.89487 2.16059 1.75 2.51033 1.75 2.875ZM2.5 2.875C2.5 2.70924 2.56585 2.55027 2.68306 2.43306C2.80027 2.31585 2.95924 2.25 3.125 2.25C3.29076 2.25 3.44973 2.31585 3.56694 2.43306C3.68415 2.55027 3.75 2.70924 3.75 2.875C3.75 3.04076 3.68415 3.19973 3.56694 3.31694C3.44973 3.43415 3.29076 3.5 3.125 3.5C2.95924 3.5 2.80027 3.43415 2.68306 3.31694C2.56585 3.19973 2.5 3.04076 2.5 2.875Z" fill="currentColor" />
+    </svg>
+);
+
+const RedirectIcon = ({ className }: { className?: string }) => (
+    <svg width="9" height="11" viewBox="0 0 9 11" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+        <path d="M1.2 0C0.88174 0 0.576515 0.126428 0.351472 0.351472C0.126428 0.576516 0 0.88174 0 1.2V1.8C0 4.8 1.2 6.6 4.2 6.6V4.8L7.2 7.2L4.2 9.6V7.8C2.292 7.8 0.894 7.29 0 6.192V9.6C0 9.91826 0.126428 10.2235 0.351472 10.4485C0.576515 10.6736 0.88174 10.8 1.2 10.8H7.2C7.51826 10.8 7.82348 10.6736 8.04853 10.4485C8.27357 10.2235 8.4 9.91826 8.4 9.6V1.2C8.4 0.88174 8.27357 0.576516 8.04853 0.351472C7.82348 0.126428 7.51826 0 7.2 0H1.2Z" fill="currentColor" />
+    </svg>
+);
+
+const SwapIcon = ({ className }: { className?: string }) => (
+    <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+        <path d="M5.13802 5.60431C5.04035 5.69861 4.9207 5.74452 4.77905 5.74204L1.69203 5.6879L2.61294 6.64169C2.70299 6.73495 2.74681 6.85024 2.7444 6.98755C2.74199 7.12486 2.69408 7.24287 2.60067 7.34158C2.49893 7.43981 2.37941 7.48773 2.24209 7.48532C2.10478 7.48291 1.98684 7.43083 1.88828 7.32909L0.132398 5.51052C0.0832822 5.45965 0.0487374 5.40487 0.0287635 5.34618C0.00878955 5.28749 -0.00044629 5.22482 0.00105597 5.15816C0.00255824 5.09151 0.0139859 5.0292 0.035339 4.97124C0.056692 4.91327 0.0931364 4.85973 0.144672 4.81063L1.97596 3.04247C2.0777 2.94424 2.19518 2.89846 2.32842 2.90513C2.46166 2.9118 2.57739 2.96584 2.67563 3.06724C2.76553 3.16883 2.81148 3.28632 2.81347 3.41971C2.81547 3.5531 2.76543 3.66891 2.66336 3.76713L1.70956 4.68805L4.79659 4.74219C4.93823 4.74467 5.05621 4.79475 5.15051 4.89242C5.24481 4.99009 5.29055 5.10957 5.28774 5.25088C5.28493 5.39218 5.23486 5.50999 5.13752 5.6043M9.59241 2.51344C9.57072 2.5714 9.53444 2.62494 9.48357 2.67406L7.65229 4.44222C7.55055 4.54045 7.43306 4.58623 7.29982 4.57956C7.16659 4.57289 7.05085 4.51885 6.95261 4.41744C6.86271 4.31585 6.81677 4.19836 6.81477 4.06497C6.81278 3.93158 6.86282 3.81578 6.96489 3.71755L7.91868 2.79664L4.83166 2.7425C4.69001 2.74001 4.57221 2.68994 4.47824 2.59228C4.38427 2.49461 4.33836 2.37512 4.3405 2.23381C4.34265 2.09249 4.39272 1.97451 4.49073 1.87989C4.58874 1.78526 4.70823 1.73951 4.84919 1.74265L7.93622 1.79679L7.0153 0.842994C6.92525 0.749734 6.88144 0.634282 6.88385 0.496636C6.88627 0.358991 6.93417 0.241146 7.02757 0.143102C7.12931 0.0448708 7.249 -0.00303845 7.38665 -0.0006245C7.5243 0.00178945 7.64207 0.0538632 7.73997 0.155595L9.49585 1.97416C9.54496 2.02503 9.57951 2.07981 9.59948 2.13851C9.61946 2.1972 9.62869 2.25987 9.62719 2.32652C9.62569 2.39317 9.61426 2.45548 9.59291 2.51345" fill="currentColor" />
+    </svg>
+);
+
+const TextReplacementIcon = ({ className }: { className?: string }) => (
+    <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+        <path d="M0 0.75H1.5C2.03043 0.75 2.53914 0.960714 2.91421 1.33579C3.28929 1.71086 3.5 2.21957 3.5 2.75M3.5 2.75V8.75M3.5 2.75C3.5 2.21957 3.71071 1.71086 4.08579 1.33579C4.46086 0.960714 4.96957 0.75 5.5 0.75H7M3.5 8.75C3.5 9.28043 3.28929 9.78914 2.91421 10.1642C2.53914 10.5393 2.03043 10.75 1.5 10.75H0M3.5 8.75C3.5 9.28043 3.71071 9.78914 4.08579 10.1642C4.46086 10.5393 4.96957 10.75 5.5 10.75H7M1 6.25H6" stroke="currentColor" strokeWidth="1.5" />
+    </svg>
+);
+
+const DashboardIcon = ({ className }: { className?: string }) => (
+    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+        <path d="M6.02292 5.625V0.389063C6.02292 0.178125 6.17793 0 6.37721 0C9.11632 0 11.3373 2.35078 11.3373 5.25C11.3373 5.46094 11.169 5.625 10.9697 5.625H6.02292ZM0 6.375C0 3.53203 1.99509 1.17891 4.58362 0.803906C4.78734 0.773437 4.96006 0.946875 4.96006 1.16484V6.75L8.42545 10.418C8.57381 10.575 8.56274 10.8328 8.39224 10.9594C7.52423 11.6156 6.46136 12 5.31435 12C2.38038 12 0 9.48281 0 6.375ZM11.6561 6.75C11.8621 6.75 12.0237 6.93281 11.9971 7.14844C11.8266 8.45859 11.231 9.62344 10.3608 10.4836C10.2279 10.6148 10.0198 10.6055 9.89132 10.4672L6.37721 6.75H11.6561Z" fill="currentColor" />
+    </svg>
+);
+
+const SaveIcon = ({ className }: { className?: string }) => (
+    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+        <path d="M1.66667 0.833333C1.44565 0.833333 1.23369 0.921131 1.07741 1.07741C0.921131 1.23369 0.833333 1.44565 0.833333 1.66667V8.33333C0.833333 8.55435 0.921131 8.76631 1.07741 8.92259C1.23369 9.07887 1.44565 9.16667 1.66667 9.16667V6.25C1.66667 5.91848 1.79836 5.60054 2.03278 5.36612C2.2672 5.1317 2.58515 5 2.91667 5H7.08333C7.41485 5 7.7328 5.1317 7.96722 5.36612C8.20164 5.60054 8.33333 5.91848 8.33333 6.25V9.16667C8.55435 9.16667 8.76631 9.07887 8.92259 8.92259C9.07887 8.76631 9.16667 8.55435 9.16667 8.33333V3.0175C9.16662 2.7965 9.07879 2.58458 8.9225 2.42833L7.57167 1.0775C7.41542 0.921209 7.2035 0.833381 6.9825 0.833333H6.66667V2.08333C6.66667 2.41485 6.53497 2.7328 6.30055 2.96722C6.06613 3.20164 5.74819 3.33333 5.41667 3.33333H3.75C3.41848 3.33333 3.10054 3.20164 2.86612 2.96722C2.6317 2.7328 2.5 2.41485 2.5 2.08333V0.833333H1.66667ZM3.33333 0.833333V2.08333C3.33333 2.19384 3.37723 2.29982 3.45537 2.37796C3.53351 2.4561 3.63949 2.5 3.75 2.5H5.41667C5.52717 2.5 5.63315 2.4561 5.71129 2.37796C5.78943 2.29982 5.83333 2.19384 5.83333 2.08333V0.833333H3.33333ZM7.5 9.16667V6.25C7.5 6.13949 7.4561 6.03351 7.37796 5.95537C7.29982 5.87723 7.19384 5.83333 7.08333 5.83333H2.91667C2.80616 5.83333 2.70018 5.87723 2.62204 5.95537C2.5439 6.03351 2.5 6.13949 2.5 6.25V9.16667H7.5ZM0 1.66667C0 1.22464 0.175595 0.800716 0.488155 0.488155C0.800716 0.175595 1.22464 0 1.66667 0H6.9825C7.42449 9.43957e-05 7.84835 0.175751 8.16083 0.488333L9.51167 1.83917C9.82425 2.15165 9.99991 2.57551 10 3.0175V8.33333C10 8.77536 9.8244 9.19928 9.51184 9.51184C9.19928 9.8244 8.77536 10 8.33333 10H1.66667C1.22464 10 0.800716 9.8244 0.488155 9.51184C0.175595 9.19928 0 8.77536 0 8.33333V1.66667Z" fill="currentColor" />
     </svg>
 );
 
@@ -42,6 +110,20 @@ export default function BrowserMockup({ onClose }: BrowserMockupProps) {
     const [modalBgColor, setModalBgColor] = useState('#FFFFFF');
     const [modalTextColor, setModalTextColor] = useState('#1A1A1A');
     const [modalButtonColor, setModalButtonColor] = useState('#3B82F6');
+    const [modalButtonTextColor, setModalButtonTextColor] = useState('#FFFFFF');
+    const [modalActiveTab, setModalActiveTab] = useState<'appearance' | 'setup'>('appearance');
+    const [modalMatchWebsite, setModalMatchWebsite] = useState(false);
+    const [modalRadius, setModalRadius] = useState(12);
+    const [modalButtonRadius, setModalButtonRadius] = useState(999);
+    const [modalFormFields, setModalFormFields] = useState([
+        { id: 1, name: 'Name', type: 'Text', required: true },
+        { id: 2, name: 'Email', type: 'Email', required: true }
+    ]);
+    const [modalFormHeadline, setModalFormHeadline] = useState('Contact us');
+    const [modalFormDescription, setModalFormDescription] = useState('Please fill out the form below');
+    const [modalFormSubmitText, setModalFormSubmitText] = useState('Submit');
+    const [modalFormSuccessMessage, setModalFormSuccessMessage] = useState('Thank you! your message has been sent');
+    const [modalRedirectUrl, setModalRedirectUrl] = useState('www.example.com');
 
     // Banner Config State
     const [isBannerConfigOpen, setIsBannerConfigOpen] = useState(false);
@@ -100,6 +182,33 @@ export default function BrowserMockup({ onClose }: BrowserMockupProps) {
     ]);
     const [isBadgeFormOpen, setIsBadgeFormOpen] = useState(false);
 
+    // Wizard Config State
+    const [isWizardConfigOpen, setIsWizardConfigOpen] = useState(false);
+    const [wizardActiveTab, setWizardActiveTab] = useState<'steps' | 'appearance' | 'setup'>('steps');
+    const [wizardSteps, setWizardSteps] = useState([
+        { id: 1, type: 'Create card', title: 'Try new feature' }
+    ]);
+    const [wizardCards, setWizardCards] = useState([
+        { id: 1, title: 'Get started', description: 'Limited time offer', tab: 'None', goTo: 'None' }
+    ]);
+    const [wizardLabels, setWizardLabels] = useState([
+        { id: 1, name: 'Tab 1', icon: 'Plus' }
+    ]);
+    const [wizardColors, setWizardColors] = useState({
+        bg: '#FFFFFF',
+        text: '#1A1A1A',
+        button: '#3B82F6',
+        secondaryText: '#6B7280',
+        buttonText: '#FFFFFF',
+        border: '#D1D5DB'
+    });
+    const [wizardDelay, setWizardDelay] = useState(0);
+    const [wizardVisibility, setWizardVisibility] = useState({
+        desktop: true,
+        tablet: true,
+        mobile: true
+    });
+
     // FAB (Floating Action Button) Config State
     const [isFABConfigOpen, setIsFABConfigOpen] = useState(false);
     const [isFABPreviewOpen, setIsFABPreviewOpen] = useState(false);
@@ -135,14 +244,17 @@ export default function BrowserMockup({ onClose }: BrowserMockupProps) {
     const [isAutoPlaying, setIsAutoPlaying] = useState(true);
     const [cursorPos, setCursorPos] = useState({ x: "50%", y: "110%" }); // Start off-screen bottom
     const [showRemoteCursor, setShowRemoteCursor] = useState(true);
-    const [instruction, setInstruction] = useState("");
     const [subInstruction, setSubInstruction] = useState("");
 
     const stopAutoPlay = () => {
         if (isAutoPlaying) {
             setIsAutoPlaying(false);
             setShowRemoteCursor(false);
-            setInstruction("");
+            setIsModalConfigOpen(false);
+            setIsBannerConfigOpen(false);
+            setIsBadgeConfigOpen(false);
+            setIsFABConfigOpen(false);
+            setIsWizardConfigOpen(false);
             setSubInstruction("");
         }
     };
@@ -158,8 +270,8 @@ export default function BrowserMockup({ onClose }: BrowserMockupProps) {
         setIsBannerConfigOpen(false);
         setIsBadgeConfigOpen(false);
         setIsFABConfigOpen(false);
+        setIsWizardConfigOpen(false);
         setIsInspecting(false);
-        setInstruction("");
         setSubInstruction("");
     };
 
@@ -169,7 +281,6 @@ export default function BrowserMockup({ onClose }: BrowserMockupProps) {
 
         const sequence = async () => {
             // --- STAGE 1: CLONE ---
-            setInstruction("Clone any existing element on your page effortlessly.");
             setSubInstruction("Initializing Clone Tool...");
             await new Promise(r => setTimeout(r, 1500));
             if (!isAutoPlaying) return;
@@ -210,7 +321,6 @@ export default function BrowserMockup({ onClose }: BrowserMockupProps) {
             await new Promise(r => setTimeout(r, 500));
 
             // --- STAGE 2: MODAL ---
-            setInstruction("Create custom modals to capture leads or show offers.");
             setSubInstruction("Configuring Modal...");
             if (!isAutoPlaying) return;
             setCursorPos({ x: "45.5%", y: "85%" }); // Modal Tool
@@ -242,7 +352,6 @@ export default function BrowserMockup({ onClose }: BrowserMockupProps) {
             setSubInstruction("");
 
             // --- STAGE 3: BANNER ---
-            setInstruction("Add smart banners for announcements and urgency.");
             setSubInstruction("Designing Banner...");
             if (!isAutoPlaying) return;
             setCursorPos({ x: "50%", y: "85%" }); // Banner Tool
@@ -274,7 +383,6 @@ export default function BrowserMockup({ onClose }: BrowserMockupProps) {
             setSubInstruction("");
 
             // --- STAGE 4: BADGE ---
-            setInstruction("Highlight specific features with interactive badges.");
             setSubInstruction("Setting up Badge...");
             if (!isAutoPlaying) return;
             setCursorPos({ x: "54.5%", y: "85%" }); // Badge Tool
@@ -306,7 +414,6 @@ export default function BrowserMockup({ onClose }: BrowserMockupProps) {
             setSubInstruction("");
 
             // --- STAGE 5: FAB ---
-            setInstruction("Deploy Floating Action Buttons for quick accessibility.");
             setSubInstruction("Customizing FAB...");
             if (!isAutoPlaying) return;
             setCursorPos({ x: "59%", y: "85%" }); // FAB Tool
@@ -443,27 +550,6 @@ export default function BrowserMockup({ onClose }: BrowserMockupProps) {
                             <MousePointer2 className="w-5 h-5 text-neon-green fill-neon-green/20 -rotate-12" strokeWidth={1.5} />
                             <div className="bg-[#070B1A]/95 backdrop-blur-md border border-neon-green/30 text-neon-green text-[10px] font-bold px-2 py-1.5 rounded-lg ml-4 -mt-2 shadow-[0_0_15px_rgba(16,185,129,0.1)] whitespace-nowrap">
                                 {subInstruction || "User"}
-                            </div>
-                        </motion.div>
-                    )}
-                </AnimatePresence>
-
-                {/* Instruction Overlay */}
-                <AnimatePresence>
-                    {isAutoPlaying && instruction && (
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: 20 }}
-                            className="absolute bottom-10 left-1/2 -translate-x-1/2 z-[80] pointer-events-none"
-                        >
-                            <div className="bg-[#070B1A]/95 backdrop-blur-xl border border-[#1E2745] px-5 py-3 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] flex items-center gap-3.5 max-w-[90vw] md:max-w-md">
-                                <div className="w-8 h-8 rounded-xl bg-neon-green/10 flex items-center justify-center shrink-0 border border-neon-green/20">
-                                    <Sparkles className="w-4 h-4 text-neon-green" />
-                                </div>
-                                <span className="text-white text-[12px] font-semibold leading-relaxed tracking-wide">
-                                    {instruction}
-                                </span>
                             </div>
                         </motion.div>
                     )}
@@ -616,44 +702,35 @@ export default function BrowserMockup({ onClose }: BrowserMockupProps) {
                             transition={{ duration: 0.2 }}
                             className="absolute top-[35%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] md:w-[280px] bg-[#070B1A] border-[0.5px] border-[#1E2745] rounded-2xl shadow-2xl overflow-hidden z-[90] cursor-grab active:cursor-grabbing hover:border-neon-green/30 transition-colors"
                         >
-                            {/* Header */}
                             <div className="flex items-center justify-between px-4 py-3 border-b border-white/5">
-                                <div className="flex items-center gap-2.5">
-                                    <GripVertical className="w-4 h-4 text-gray-500" />
-                                    <span className="text-[11px] font-bold tracking-widest text-white uppercase">Clone Config</span>
+                                <div className="flex items-center gap-2">
+                                    <CloneIcon className="w-3.5 h-3.5 text-neon-green" />
+                                    <span className="text-xs font-semibold text-white">Clone setting</span>
                                 </div>
-                                <div
-                                    className="text-gray-500 hover:text-white cursor-pointer transition-colors"
-                                    onClick={() => setIsModalOpen(false)}
-                                >
-                                    <X className="w-4 h-4" />
+                                <div className="flex items-center gap-3">
+                                    <Minus className="w-3.5 h-3.5 text-gray-500 hover:text-white cursor-pointer" />
+                                    <X
+                                        className="w-3.5 h-3.5 text-gray-500 hover:text-white cursor-pointer transition-colors"
+                                        onClick={() => setIsModalOpen(false)}
+                                    />
                                 </div>
                             </div>
 
-                            {/* Sync Bar */}
-                            <div className="bg-[#051a05] border-b-[0.5px] border-[#1E2745] px-5 py-2 flex items-center justify-between">
-                                <span className="text-[10px] text-neon-green font-medium">Syncing: username</span>
-                                <span className="text-[10px] text-gray-400 hover:text-white cursor-pointer underline decoration-white/20 underline-offset-2">Logout</span>
-                            </div>
-
-                            {/* Body */}
                             <div className="p-4 cursor-default" onPointerDown={(e) => e.stopPropagation()}>
-                                <div className="bg-[#1E2745] border-[0.5px] border-[#1E2745] rounded-xl p-6 flex flex-col items-center text-center gap-3.5">
-                                    <div className="w-9 h-9 rounded border border-white/10 flex items-center justify-center text-neon-green bg-white/5">
-                                        <Layout className="w-4.5 h-4.5" strokeWidth={1.5} />
-                                    </div>
+                                <div className="bg-[#111821] border border-white/5 rounded-2xl p-8 flex flex-col items-center text-center gap-4">
+                                    <Layout className="w-6 h-6 text-neon-green" strokeWidth={1.5} />
 
                                     <div className="space-y-1">
-                                        <div className="text-[13px] font-bold text-white">Select element to clone</div>
-                                        <div className="text-[10px] text-gray-500">Pick any component from the page</div>
+                                        <div className="text-sm font-bold text-white">Start element to clone</div>
+                                        <div className="text-[11px] text-gray-500">Pick any component from page</div>
                                     </div>
 
                                     <button
                                         onClick={handleStartInspection}
-                                        className={`flex items-center gap-2 bg-white text-black px-5 py-2 rounded-lg text-xs font-bold mt-1.5 hover:bg-gray-200 transition-colors w-full justify-center shadow-lg shadow-white/5 ${!isAutoPlaying ? 'animate-pulse' : ''}`}
+                                        className="flex items-center gap-2 bg-transparent border border-neon-green text-neon-green px-6 py-2.5 rounded-xl text-xs font-bold mt-2"
                                     >
-                                        <Navigation className="w-3.5 h-3.5 fill-black" />
-                                        Start Inspection
+                                        <MousePointer2 className="w-3.5 h-3.5" />
+                                        Select element
                                     </button>
                                 </div>
                             </div>
@@ -676,178 +753,407 @@ export default function BrowserMockup({ onClose }: BrowserMockupProps) {
                             className="absolute top-[35%] left-1/2 w-[90%] md:w-[300px] max-h-[65%] bg-[#070B1A] border-[0.5px] border-[#1E2745] rounded-2xl shadow-2xl overflow-hidden z-[90] cursor-grab active:cursor-grabbing hover:border-neon-green/30 transition-colors flex flex-col"
                         >
                             {/* Header */}
-                            <div className="flex items-center justify-between px-4 py-3 border-b-[0.5px] border-[#1E2745] shrink-0">
-                                <div className="flex items-center gap-2.5">
-                                    <GripVertical className="w-3.5 h-3.5 text-gray-500" />
-                                    <span className="text-[10px] font-bold tracking-widest text-white uppercase">Modal Config</span>
+                            <div className="flex items-center justify-between px-4 py-3 border-b border-white/10 shrink-0">
+                                <div className="flex items-center gap-2">
+                                    <ModalIcon className="w-3.5 h-3.5 text-neon-green" />
+                                    <span className="text-xs font-semibold text-white">Modal setting</span>
                                 </div>
-                                <div
-                                    className="text-gray-500 hover:text-white cursor-pointer transition-colors"
-                                    onClick={() => setIsModalConfigOpen(false)}
-                                >
-                                    <X className="w-4 h-4" />
+                                <div className="flex items-center gap-3">
+                                    <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-white cursor-pointer">
+                                        <EyeOff className="w-3.5 h-3.5" />
+                                    </div>
+                                    <Minus className="w-3.5 h-3.5 text-gray-500 hover:text-white cursor-pointer" />
+                                    <X
+                                        className="w-3.5 h-3.5 text-gray-500 hover:text-white cursor-pointer transition-colors"
+                                        onClick={() => setIsModalConfigOpen(false)}
+                                    />
                                 </div>
                             </div>
 
-                            {/* Scrollable Body */}
-                            <div className="p-3.5 cursor-default overflow-y-auto flex-1" onPointerDown={(e) => e.stopPropagation()}>
-                                {/* Content Section */}
-                                <div className="bg-[#1E2745] border-[0.5px] border-[#1E2745] rounded-xl p-3 mb-3">
-                                    <div className="flex items-center gap-2 mb-3">
-                                        <Pencil className="w-3.5 h-3.5 text-neon-green" />
-                                        <span className="text-xs font-bold text-white">Content</span>
-                                    </div>
-
-                                    {/* Headline */}
-                                    <div className="mb-2.5">
-                                        <label className="text-[9px] text-gray-400 uppercase tracking-wider mb-1 block">Headline</label>
-                                        <div className="relative">
-                                            <input
-                                                type="text"
-                                                value={modalHeadline}
-                                                onChange={(e) => setModalHeadline(e.target.value)}
-                                                className="w-full bg-[#070B1A] border border-[#1E2745] rounded-lg px-3 py-2 text-[11px] text-white placeholder-gray-500 focus:outline-none focus:border-white/30 pr-8"
-                                            />
-                                            <Pencil className="w-3 h-3 text-gray-500 absolute right-3 top-1/2 -translate-y-1/2" />
-                                        </div>
-                                    </div>
-
-                                    {/* Description */}
-                                    <div className="mb-2.5">
-                                        <label className="text-[9px] text-gray-400 uppercase tracking-wider mb-1 block">Description</label>
-                                        <div className="relative">
-                                            <textarea
-                                                value={modalDescription}
-                                                onChange={(e) => setModalDescription(e.target.value)}
-                                                rows={2}
-                                                className="w-full bg-[#070B1A] border border-[#1E2745] rounded-lg px-3 py-2 text-[11px] text-white placeholder-gray-500 focus:outline-none focus:border-white/30 pr-8 resize-none"
-                                            />
-                                            <Pencil className="w-3 h-3 text-gray-500 absolute right-3 top-3" />
-                                        </div>
-                                    </div>
-
-                                    {/* Button Label */}
-                                    <div className="mb-2.5">
-                                        <label className="text-[9px] text-gray-400 uppercase tracking-wider mb-1 block">Button label</label>
-                                        <div className="relative">
-                                            <input
-                                                type="text"
-                                                value={modalButtonLabel}
-                                                onChange={(e) => setModalButtonLabel(e.target.value)}
-                                                className="w-full bg-[#070B1A] border border-[#1E2745] rounded-lg px-3 py-2 text-[11px] text-white placeholder-gray-500 focus:outline-none focus:border-white/30 pr-8"
-                                            />
-                                            <Pencil className="w-3 h-3 text-gray-500 absolute right-3 top-1/2 -translate-y-1/2" />
-                                        </div>
-                                    </div>
-
-                                    {/* Button Link */}
-                                    <div>
-                                        <label className="text-[9px] text-gray-400 uppercase tracking-wider mb-1 block">Button link</label>
-                                        <div className="relative">
-                                            <input
-                                                type="text"
-                                                value={modalButtonLink}
-                                                onChange={(e) => setModalButtonLink(e.target.value)}
-                                                className="w-full bg-[#070B1A] border border-[#1E2745] rounded-lg px-3 py-2 text-[11px] text-white placeholder-gray-500 focus:outline-none focus:border-white/30 pr-8"
-                                            />
-                                            <Pencil className="w-3 h-3 text-gray-500 absolute right-3 top-1/2 -translate-y-1/2" />
-                                        </div>
-                                    </div>
+                            {/* Tabs */}
+                            <div className="px-3.5 pt-3">
+                                <div className="bg-white/5 rounded-xl p-1 flex items-center gap-1">
+                                    <button
+                                        onClick={() => setModalActiveTab('appearance')}
+                                        className={`flex-1 py-2.5 rounded-lg text-[11px] font-bold transition-all ${modalActiveTab === 'appearance' ? 'bg-neon-green text-black' : 'text-gray-400 hover:text-white'}`}
+                                    >
+                                        Appearance
+                                    </button>
+                                    <button
+                                        onClick={() => setModalActiveTab('setup')}
+                                        className={`flex-1 py-2.5 rounded-lg text-[11px] font-bold transition-all ${modalActiveTab === 'setup' ? 'bg-neon-green text-black' : 'text-gray-400 hover:text-white'}`}
+                                    >
+                                        Setup
+                                    </button>
                                 </div>
+                            </div>
 
-                                {/* Action Type Section */}
-                                <div className="bg-[#1E2745] border-[0.5px] border-[#1E2745] rounded-xl p-3 mb-3">
-                                    <div className="flex items-center gap-2 mb-3">
-                                        <Sparkles className="w-3.5 h-3.5 text-neon-green" />
-                                        <span className="text-xs font-bold text-white">Action Type</span>
-                                    </div>
-                                    <div className="flex gap-2">
-                                        <button
-                                            onClick={() => setActionType('link')}
-                                            className={`flex-1 py-2 rounded-lg text-xs font-medium transition-all ${actionType === 'link'
-                                                ? 'bg-transparent border-2 border-neon-green text-neon-green'
-                                                : 'bg-[#070B1A] border border-[#1E2745] text-gray-400 hover:text-white'
-                                                }`}
-                                        >
-                                            Link
-                                        </button>
-                                        <button
-                                            onClick={() => setActionType('form')}
-                                            className={`flex-1 py-2 rounded-lg text-xs font-medium transition-all ${actionType === 'form'
-                                                ? 'bg-transparent border-2 border-neon-green text-neon-green'
-                                                : 'bg-[#070B1A] border border-[#1E2745] text-gray-400 hover:text-white'
-                                                }`}
-                                        >
-                                            Form
-                                        </button>
-                                    </div>
-                                </div>
+                            <div
+                                className="p-3.5 cursor-default overflow-y-auto flex-1 space-y-3 min-h-0"
+                                onPointerDown={(e) => e.stopPropagation()}
+                                onWheel={(e) => e.stopPropagation()}
+                                onTouchStart={(e) => e.stopPropagation()}
+                            >
+                                {/* Appearance Tab */}
+                                {modalActiveTab === 'appearance' && (
+                                    <>
+                                        {/* Modal content Card */}
+                                        <div className="bg-[#111821] border border-white/5 rounded-2xl p-4">
+                                            <div className="flex items-center justify-between mb-4">
+                                                <div className="flex items-center gap-2">
+                                                    <Pencil className="w-3.5 h-3.5 text-neon-green" strokeWidth={2} />
+                                                    <span className="text-xs font-bold text-white">Modal content</span>
+                                                </div>
+                                                <ChevronDown className="w-3.5 h-3.5 text-gray-500" />
+                                            </div>
 
-                                {/* Style Section */}
-                                <div className="bg-[#1E2745] border-[0.5px] border-[#1E2745] rounded-xl p-3 mb-3">
-                                    <div className="flex items-center gap-2 mb-3">
-                                        <Palette className="w-3.5 h-3.5 text-neon-green" />
-                                        <span className="text-xs font-bold text-white">Style</span>
-                                    </div>
-                                    <div className="grid grid-cols-3 gap-2">
-                                        {/* Background */}
-                                        <div>
-                                            <label className="text-[8px] text-gray-500 uppercase tracking-wider mb-1 block">Bg</label>
-                                            <div className="flex items-center gap-1.5 bg-[#070B1A] border border-[#1E2745] rounded-lg px-1.5 py-1.5">
-                                                <div className="w-4 h-4 rounded bg-white border border-white/20" />
-                                                <span className="text-[9px] text-gray-400 font-mono">#FFF</span>
+                                            {/* Headline */}
+                                            <div className="mb-4">
+                                                <label className="text-[10px] text-gray-400 font-medium mb-1.5 block">Headline</label>
+                                                <div className="relative">
+                                                    <input
+                                                        type="text"
+                                                        placeholder="e.g Welcome!"
+                                                        value={modalHeadline}
+                                                        onChange={(e) => setModalHeadline(e.target.value)}
+                                                        className="w-full bg-[#070B1A] border border-[#1E2540] rounded-xl px-4 py-3 text-[11px] text-white placeholder-gray-600 focus:outline-none focus:border-neon-green/50 pr-10"
+                                                    />
+                                                    <Pencil className="w-3.5 h-3.5 text-gray-600 absolute right-3.5 top-1/2 -translate-y-1/2" />
+                                                </div>
+                                            </div>
+
+                                            {/* Description */}
+                                            <div className="mb-4">
+                                                <label className="text-[10px] text-gray-400 font-medium mb-1.5 block">Description</label>
+                                                <div className="relative">
+                                                    <textarea
+                                                        placeholder="e.g Check out our new features"
+                                                        value={modalDescription}
+                                                        onChange={(e) => setModalDescription(e.target.value)}
+                                                        rows={2}
+                                                        className="w-full bg-[#070B1A] border border-[#1E2540] rounded-xl px-4 py-3 text-[11px] text-white placeholder-gray-600 focus:outline-none focus:border-neon-green/50 pr-10 resize-none"
+                                                    />
+                                                    <Pencil className="w-3.5 h-3.5 text-gray-600 absolute right-3.5 top-4" />
+                                                </div>
+                                            </div>
+
+                                            {/* Button Label */}
+                                            <div>
+                                                <label className="text-[10px] text-gray-400 font-medium mb-1.5 block">Button label</label>
+                                                <div className="relative">
+                                                    <input
+                                                        type="text"
+                                                        placeholder="e.g Learn more"
+                                                        value={modalButtonLabel}
+                                                        onChange={(e) => setModalButtonLabel(e.target.value)}
+                                                        className="w-full bg-[#070B1A] border border-[#1E2540] rounded-xl px-4 py-3 text-[11px] text-white placeholder-gray-600 focus:outline-none focus:border-neon-green/50 pr-10"
+                                                    />
+                                                    <Pencil className="w-3.5 h-3.5 text-gray-600 absolute right-3.5 top-1/2 -translate-y-1/2" />
+                                                </div>
                                             </div>
                                         </div>
-                                        {/* Text color */}
-                                        <div>
-                                            <label className="text-[8px] text-gray-500 uppercase tracking-wider mb-1 block">Text</label>
-                                            <div className="flex items-center gap-1.5 bg-[#070B1A] border border-[#1E2745] rounded-lg px-1.5 py-1.5">
-                                                <div className="w-4 h-4 rounded bg-[#1A1A1A] border border-white/20" />
-                                                <span className="text-[9px] text-gray-400 font-mono">#1A</span>
-                                            </div>
-                                        </div>
-                                        {/* Button */}
-                                        <div>
-                                            <label className="text-[8px] text-gray-500 uppercase tracking-wider mb-1 block">Btn</label>
-                                            <div className="flex items-center gap-1.5 bg-[#070B1A] border border-[#1E2745] rounded-lg px-1.5 py-1.5">
-                                                <div className="w-4 h-4 rounded bg-blue-500 border border-white/20" />
-                                                <span className="text-[9px] text-gray-400 font-mono">#3B</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
 
-                                {/* Delay Section */}
-                                <div className="bg-[#1E2745] border-[0.5px] border-[#1E2745] rounded-xl p-3">
-                                    <div className="flex items-center justify-between mb-2">
-                                        <div className="flex items-center gap-2">
-                                            <Clock className="w-3.5 h-3.5 text-neon-green" />
-                                            <span className="text-xs font-bold text-white">Delay</span>
+                                        {/* Color Section */}
+                                        <div className="bg-[#111821] border border-white/5 rounded-2xl p-4">
+                                            <div className="flex items-center justify-between mb-4">
+                                                <div className="flex items-center gap-2">
+                                                    <Palette className="w-3.5 h-3.5 text-neon-green" />
+                                                    <span className="text-xs font-bold text-white">Modal color</span>
+                                                </div>
+                                                <ChevronDown className="w-3.5 h-3.5 text-gray-500" />
+                                            </div>
+
+                                            <div className="space-y-4 pt-1">
+                                                {/* Toggle Card */}
+                                                <div className="bg-black/20 border border-white/5 rounded-2xl p-4 flex items-center justify-between group cursor-pointer hover:border-white/10 transition-colors">
+                                                    <div className="space-y-1">
+                                                        <div className="text-[11px] font-bold text-white">Match website style</div>
+                                                        <div className="text-[9px] text-gray-500 leading-tight pr-4">Use page typography, surface color, accent button color, radius, and overlay feel.</div>
+                                                    </div>
+                                                    <div
+                                                        onClick={(e) => { e.stopPropagation(); setModalMatchWebsite(!modalMatchWebsite); }}
+                                                        className={`w-10 h-5.5 rounded-full p-1 transition-colors shrink-0 ${modalMatchWebsite ? 'bg-neon-green' : 'bg-gray-700'}`}
+                                                    >
+                                                        <div className={`w-3.5 h-3.5 bg-white rounded-full transition-transform ${modalMatchWebsite ? 'translate-x-4.5' : 'translate-x-0'}`} />
+                                                    </div>
+                                                </div>
+
+                                                {/* Color Grids */}
+                                                <div className="grid grid-cols-2 gap-3">
+                                                    <div className="space-y-1.5">
+                                                        <label className="text-[10px] text-gray-400 font-medium ml-1">Background</label>
+                                                        <div className="bg-black/20 border border-white/5 rounded-xl px-3 py-2.5 flex items-center gap-2.5">
+                                                            <div className="w-4 h-4 rounded bg-white shadow-sm" />
+                                                            <span className="text-[10px] text-white font-mono uppercase font-bold tracking-wider">#FFFFFF</span>
+                                                        </div>
+                                                    </div>
+                                                    <div className="space-y-1.5">
+                                                        <label className="text-[10px] text-gray-400 font-medium ml-1">Text color</label>
+                                                        <div className="bg-black/20 border border-white/5 rounded-xl px-3 py-2.5 flex items-center gap-2.5">
+                                                            <div className="w-4 h-4 rounded bg-[#1A1A1A] border border-white/10" />
+                                                            <span className="text-[10px] text-white font-mono uppercase font-bold tracking-wider">#1A1A1A</span>
+                                                        </div>
+                                                    </div>
+                                                    <div className="space-y-1.5">
+                                                        <label className="text-[10px] text-gray-400 font-medium ml-1">Button color</label>
+                                                        <div className="bg-black/20 border border-white/5 rounded-xl px-3 py-2.5 flex items-center gap-2.5">
+                                                            <div className="w-4 h-4 rounded bg-[#3B82F6]" />
+                                                            <span className="text-[10px] text-white font-mono uppercase font-bold tracking-wider">#3B82F6</span>
+                                                        </div>
+                                                    </div>
+                                                    <div className="space-y-1.5">
+                                                        <label className="text-[10px] text-gray-400 font-medium ml-1">Button text</label>
+                                                        <div className="bg-black/20 border border-white/5 rounded-xl px-3 py-2.5 flex items-center gap-2.5">
+                                                            <div className="w-4 h-4 rounded bg-white" />
+                                                            <span className="text-[10px] text-white font-mono uppercase font-bold tracking-wider">#FFFFFF</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                {/* Sliders */}
+                                                <div className="space-y-4 pt-2">
+                                                    <div className="space-y-3">
+                                                        <div className="flex items-center justify-between text-[10px] font-bold">
+                                                            <span className="text-white">Modal radius</span>
+                                                            <span className="text-gray-400 font-mono tracking-wider">{modalRadius}px</span>
+                                                        </div>
+                                                        <div
+                                                            className="h-1 bg-white/5 rounded-full relative cursor-pointer"
+                                                            onClick={(e) => {
+                                                                const rect = e.currentTarget.getBoundingClientRect();
+                                                                const percent = (e.clientX - rect.left) / rect.width;
+                                                                setModalRadius(Math.round(percent * 40));
+                                                            }}
+                                                        >
+                                                            <div className="absolute top-0 left-0 h-full bg-neon-green rounded-full" style={{ width: `${(modalRadius / 40) * 100}%` }} />
+                                                            <div
+                                                                className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 w-3.5 h-3.5 bg-neon-green rounded-full shadow-[0_0_10px_rgba(20,255,0,0.5)]"
+                                                                style={{ left: `${(modalRadius / 40) * 100}%` }}
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                    <div className="space-y-3">
+                                                        <div className="flex items-center justify-between text-[10px] font-bold">
+                                                            <span className="text-white">Button radius</span>
+                                                            <span className="text-gray-400 font-mono tracking-wider">{modalButtonRadius === 999 ? 'Full' : `${modalButtonRadius}px`}</span>
+                                                        </div>
+                                                        <div
+                                                            className="h-1 bg-white/5 rounded-full relative cursor-pointer"
+                                                            onClick={(e) => {
+                                                                const rect = e.currentTarget.getBoundingClientRect();
+                                                                const percent = (e.clientX - rect.left) / rect.width;
+                                                                setModalButtonRadius(percent > 0.9 ? 999 : Math.round(percent * 40));
+                                                            }}
+                                                        >
+                                                            <div className="absolute top-0 left-0 h-full bg-neon-green rounded-full" style={{ width: `${modalButtonRadius === 999 ? 100 : (modalButtonRadius / 40) * 100}%` }} />
+                                                            <div
+                                                                className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 w-3.5 h-3.5 bg-neon-green rounded-full shadow-[0_0_10px_rgba(20,255,0,0.5)]"
+                                                                style={{ left: `${modalButtonRadius === 999 ? 100 : (modalButtonRadius / 40) * 100}%` }}
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <span className="text-xs font-bold text-neon-green">0s</span>
-                                    </div>
-                                    <div className="relative">
-                                        <div className="h-1 bg-[#161B22] rounded-full">
-                                            <div className="h-1 bg-neon-green rounded-full w-0" />
+                                    </>
+                                )}
+
+                                {/* Setup Tab */}
+                                {modalActiveTab === 'setup' && (
+                                    <>
+                                        {/* Modal Action Card */}
+                                        <div className="bg-[#111821] border border-white/5 rounded-2xl p-4">
+                                            <div className="flex items-center justify-between mb-4">
+                                                <div className="flex items-center gap-2">
+                                                    <Layout className="w-3.5 h-3.5 text-neon-green" />
+                                                    <span className="text-xs font-bold text-white">Modal action</span>
+                                                </div>
+                                                <ChevronDown className="w-3.5 h-3.5 text-gray-500" />
+                                            </div>
+
+                                            <div className="flex gap-2">
+                                                <button
+                                                    onClick={() => setActionType('link')}
+                                                    className={`flex-1 py-3.5 rounded-xl border-2 text-[11px] font-bold transition-all relative ${actionType === 'link' ? 'border-neon-green text-neon-green bg-transparent' : 'border-white/5 bg-black/20 text-gray-400'}`}
+                                                >
+                                                    Link
+                                                    {actionType === 'link' && <div className="absolute top-1.5 right-1.5 w-1.5 h-1.5 bg-neon-green rounded-full shadow-[0_0_5px_rgba(20,255,0,0.5)]" />}
+                                                </button>
+                                                <button
+                                                    onClick={() => setActionType('form')}
+                                                    className={`flex-1 py-3.5 rounded-xl border-2 text-[11px] font-bold transition-all relative ${actionType === 'form' ? 'border-neon-green text-neon-green bg-transparent' : 'border-white/5 bg-black/20 text-gray-400'}`}
+                                                >
+                                                    Form
+                                                    {actionType === 'form' && <div className="absolute top-1.5 right-1.5 w-1.5 h-1.5 bg-neon-green rounded-full shadow-[0_0_5px_rgba(20,255,0,0.5)]" />}
+                                                </button>
+                                            </div>
                                         </div>
-                                        <div className="absolute -top-1 left-0 w-3 h-3 bg-neon-green rounded-full border-2 border-[#1E2745]" />
-                                    </div>
-                                </div>
+
+                                        {actionType === 'link' ? (
+                                            <div className="bg-[#111821] border border-white/5 rounded-2xl p-4">
+                                                <div className="flex items-center justify-between mb-4">
+                                                    <div className="flex items-center gap-2">
+                                                        <Link2 className="w-3.5 h-3.5 text-neon-green" />
+                                                        <span className="text-xs font-bold text-white">Modal redirect link</span>
+                                                    </div>
+                                                    <ChevronDown className="w-3.5 h-3.5 text-gray-500" />
+                                                </div>
+
+                                                <div className="bg-[#070B1A] border border-[#1E2540] rounded-xl px-4 py-3 flex items-center gap-2 pr-10 relative">
+                                                    <span className="text-[11px] text-neon-green font-bold bg-neon-green/10 px-2 py-0.5 rounded">https://</span>
+                                                    <input
+                                                        type="text"
+                                                        placeholder="www.example.com"
+                                                        value={modalRedirectUrl}
+                                                        onChange={(e) => setModalRedirectUrl(e.target.value)}
+                                                        className="bg-transparent border-none outline-none text-[11px] text-white flex-1"
+                                                    />
+                                                    <Pencil className="w-3.5 h-3.5 text-gray-600 absolute right-3.5 top-1/2 -translate-y-1/2" />
+                                                </div>
+                                            </div>
+                                        ) : (
+                                            <>
+                                                {/* Form config cards */}
+                                                <div className="bg-[#111821] border border-white/5 rounded-2xl p-4">
+                                                    <div className="flex items-center justify-between mb-4">
+                                                        <div className="flex items-center gap-2">
+                                                            <Megaphone className="w-3.5 h-3.5 text-neon-green" />
+                                                            <span className="text-xs font-bold text-white">Form setup</span>
+                                                        </div>
+                                                        <ChevronDown className="w-3.5 h-3.5 text-gray-500" />
+                                                    </div>
+                                                    <div className="space-y-4">
+                                                        <div>
+                                                            <label className="text-[10px] text-gray-400 mb-1.5 block">Form headline</label>
+                                                            <div className="relative">
+                                                                <input
+                                                                    type="text"
+                                                                    value={modalFormHeadline}
+                                                                    onChange={(e) => setModalFormHeadline(e.target.value)}
+                                                                    className="w-full bg-[#070B1A] border border-[#1E2540] rounded-xl px-4 py-3 text-[11px] text-white pr-10"
+                                                                />
+                                                                <Pencil className="w-3.5 h-3.5 text-gray-600 absolute right-3.5 top-1/2 -translate-y-1/2" />
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <label className="text-[10px] text-gray-400 mb-1.5 block">Form description</label>
+                                                            <div className="relative">
+                                                                <input
+                                                                    type="text"
+                                                                    value={modalFormDescription}
+                                                                    onChange={(e) => setModalFormDescription(e.target.value)}
+                                                                    className="w-full bg-[#070B1A] border border-[#1E2540] rounded-xl px-4 py-3 text-[11px] text-white pr-10"
+                                                                />
+                                                                <Pencil className="w-3.5 h-3.5 text-gray-600 absolute right-3.5 top-1/2 -translate-y-1/2" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div className="bg-[#111821] border border-white/5 rounded-2xl p-4">
+                                                    <div className="flex items-center justify-between mb-4">
+                                                        <div className="flex items-center gap-2">
+                                                            <AppWindow className="w-3.5 h-3.5 text-neon-green" />
+                                                            <span className="text-xs font-bold text-white">Form field</span>
+                                                        </div>
+                                                        <ChevronDown className="w-3.5 h-3.5 text-gray-500" />
+                                                    </div>
+
+                                                    <div className="space-y-3">
+                                                        {modalFormFields.map(field => (
+                                                            <div key={field.id} className="bg-black/20 border border-white/5 rounded-2xl p-3.5 space-y-3.5">
+                                                                <div className="flex items-center justify-between">
+                                                                    <div className="flex items-center gap-2">
+                                                                        <Scan className="w-3.5 h-3.5 text-neon-green" />
+                                                                        <span className="text-[10px] font-bold text-white">Label</span>
+                                                                    </div>
+                                                                    <div className="flex items-center gap-2">
+                                                                        <span className="text-[9px] text-gray-400 font-bold uppercase tracking-wider">Required</span>
+                                                                        <div
+                                                                            onClick={() => setModalFormFields(modalFormFields.map(f => f.id === field.id ? { ...f, required: !f.required } : f))}
+                                                                            className={`w-8 h-4.5 rounded-full p-0.5 cursor-pointer transition-colors ${field.required ? 'bg-neon-green' : 'bg-gray-700'}`}
+                                                                        >
+                                                                            <div className={`w-3.5 h-3.5 bg-white rounded-full transition-transform ${field.required ? 'translate-x-3.5' : 'translate-x-0'} shadow-sm`} />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div className="flex gap-2">
+                                                                    <div className="flex-[2] relative">
+                                                                        <input
+                                                                            type="text"
+                                                                            value={field.name}
+                                                                            onChange={(e) => setModalFormFields(modalFormFields.map(f => f.id === field.id ? { ...f, name: e.target.value } : f))}
+                                                                            className="w-full bg-[#070B1A] border border-[#1E2540] rounded-xl px-3.5 py-2.5 text-[10px] text-white pr-8 font-medium"
+                                                                        />
+                                                                        <Pencil className="w-3 h-3 text-gray-600 absolute right-2.5 top-1/2 -translate-y-1/2" />
+                                                                    </div>
+                                                                    <div className="flex-1 bg-[#070B1A] border border-[#1E2540] rounded-xl px-3 py-2.5 flex items-center justify-between text-[10px] text-white font-bold cursor-pointer hover:bg-white/5">
+                                                                        {field.type}
+                                                                        <ChevronDown className="w-3 h-3 text-gray-500" />
+                                                                    </div>
+                                                                    <button
+                                                                        onClick={() => setModalFormFields(modalFormFields.filter(f => f.id !== field.id))}
+                                                                        className="p-2.5 rounded-xl border border-white/5 bg-red-500/10 text-red-500 hover:bg-red-500 hover:text-white transition-all"
+                                                                    >
+                                                                        <Trash2 className="w-3.5 h-3.5" />
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        ))}
+
+                                                        <button
+                                                            onClick={() => setModalFormFields([...modalFormFields, { id: Date.now(), name: 'New Field', type: 'Text', required: false }])}
+                                                            className="w-full py-2 rounded-lg border border-neon-green text-neon-green text-[10px] font-bold mt-2 hover:bg-neon-green/5 transition-all flex items-center justify-center gap-2"
+                                                        >
+                                                            <Plus className="w-3 h-3" />
+                                                            Add field
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </>
+                                        )}
+
+                                        <div className="bg-[#111821] border border-white/5 rounded-2xl p-4 flex items-center justify-between group cursor-pointer hover:border-white/10 transition-colors">
+                                            <div className="flex items-center gap-2">
+                                                <Clock className="w-3.5 h-3.5 text-neon-green" />
+                                                <span className="text-xs font-bold text-white">Trigger modal after</span>
+                                            </div>
+                                            <ChevronRight className="w-3.5 h-3.5 text-gray-500" />
+                                        </div>
+
+                                        <div className="bg-[#111821] border border-white/5 rounded-2xl p-4 flex items-center justify-between group cursor-pointer hover:border-white/10 transition-colors">
+                                            <div className="flex items-center gap-2">
+                                                <Eye className="w-3.5 h-3.5 text-neon-green" />
+                                                <span className="text-xs font-bold text-white">Visibility</span>
+                                            </div>
+                                            <ChevronRight className="w-3.5 h-3.5 text-gray-500" />
+                                        </div>
+                                    </>
+                                )}
                             </div>
 
                             {/* Footer Actions */}
-                            <div className="flex items-center gap-2.5 px-4 py-3 border-t-[0.5px] border-[#1E2745] shrink-0">
-                                <button className="flex items-center gap-1.5 text-gray-400 hover:text-white text-xs font-medium transition-colors">
-                                    <RotateCcw className="w-3 h-3" />
-                                    Reset
-                                </button>
-                                <button
-                                    onClick={() => { setIsPreviewModalOpen(true); setIsModalConfigOpen(false); }}
-                                    className="flex-1 flex items-center justify-center gap-2 bg-neon-green text-black py-2.5 rounded-xl text-xs font-bold hover:bg-neon-green/90 transition-colors"
-                                >
-                                    <Plus className="w-3.5 h-3.5" />
-                                    Add to page
-                                </button>
+                            <div className="bg-[#070B1A] border-t border-white/10 px-4 py-4 mt-auto">
+                                <div className="flex items-center gap-2">
+                                    <button className="flex flex-col items-center justify-center gap-1 px-2 text-gray-500 hover:text-white transition-all">
+                                        <RotateCcw className="w-4 h-4" />
+                                        <span className="text-[9px] font-medium">Undo</span>
+                                    </button>
+
+                                    <div className="flex-1 flex items-center gap-2 ml-2">
+                                        <button className="flex-1 flex items-center justify-center gap-2 bg-[#1E2532] text-white py-3 rounded-xl text-[10px] font-bold hover:bg-[#2A3445] transition-all">
+                                            <SaveIcon className="w-3.5 h-3.5 text-neon-green" />
+                                            Save
+                                        </button>
+                                        <button
+                                            onClick={() => { setIsPreviewModalOpen(true); setIsModalConfigOpen(false); }}
+                                            className="flex-[1.5] flex items-center justify-center gap-2 bg-[#1E2532] text-white py-3 rounded-xl text-[10px] font-bold hover:bg-[#2A3445] transition-all"
+                                        >
+                                            <Plus className="w-3.5 h-3.5 text-neon-green" />
+                                            Add to page
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </motion.div>
                     )}
@@ -1756,6 +2062,396 @@ export default function BrowserMockup({ onClose }: BrowserMockupProps) {
                     )}
                 </AnimatePresence>
 
+                {/* 5.7 Wizard Config Popup */}
+                <AnimatePresence>
+                    {isWizardConfigOpen && (
+                        <motion.div
+                            drag
+                            dragConstraints={containerRef}
+                            dragElastic={0.05}
+                            dragMomentum={false}
+                            initial={{ opacity: 0, scale: 0.9, x: "-50%", y: "-50%" }}
+                            animate={{ opacity: 1, scale: 1, x: "-50%", y: "-50%" }}
+                            exit={{ opacity: 0, scale: 0.9, x: "-50%", y: "-50%" }}
+                            transition={{ duration: 0.2 }}
+                            className="absolute top-[35%] left-1/2 w-[90%] md:w-[320px] max-h-[70%] bg-[#070B1A] border-[0.5px] border-[#1E2745] rounded-3xl shadow-2xl overflow-hidden z-[90] cursor-grab active:cursor-grabbing hover:border-neon-green/30 transition-colors flex flex-col"
+                        >
+                            {/* Header */}
+                            <div className="flex items-center justify-between px-4 py-3 border-b border-white/10 shrink-0">
+                                <div className="flex items-center gap-2">
+                                    <Wand2 className="w-3.5 h-3.5 text-neon-green" />
+                                    <span className="text-xs font-semibold text-white">Wizard setting</span>
+                                </div>
+                                <div className="flex items-center gap-3">
+                                    <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-white cursor-pointer">
+                                        <EyeOff className="w-3.5 h-3.5" />
+                                    </div>
+                                    <Minus className="w-3.5 h-3.5 text-gray-500 hover:text-white cursor-pointer" />
+                                    <X
+                                        className="w-3.5 h-3.5 text-gray-500 hover:text-white cursor-pointer transition-colors"
+                                        onClick={() => setIsWizardConfigOpen(false)}
+                                    />
+                                </div>
+                            </div>
+
+                            {/* Tabs */}
+                            <div className="px-4 pt-4">
+                                <div className="bg-white/5 rounded-xl p-1 flex items-center gap-1">
+                                    <button
+                                        onClick={() => setWizardActiveTab('steps')}
+                                        className={`flex-1 py-4 rounded-lg text-xs font-bold transition-all ${wizardActiveTab === 'steps' ? 'bg-neon-green text-black' : 'text-gray-400 hover:text-white'}`}
+                                    >
+                                        Steps
+                                    </button>
+                                    <button
+                                        onClick={() => setWizardActiveTab('appearance')}
+                                        className={`flex-1 py-4 rounded-lg text-xs font-bold transition-all ${wizardActiveTab === 'appearance' ? 'bg-neon-green text-black' : 'text-gray-400 hover:text-white'}`}
+                                    >
+                                        Appearance
+                                    </button>
+                                    <button
+                                        onClick={() => setWizardActiveTab('setup')}
+                                        className={`flex-1 py-4 rounded-lg text-xs font-bold transition-all ${wizardActiveTab === 'setup' ? 'bg-neon-green text-black' : 'text-gray-400 hover:text-white'}`}
+                                    >
+                                        Setup
+                                    </button>
+                                </div>
+                            </div>
+
+                            {/* Scrollable Body */}
+                            <div
+                                className="p-4 cursor-default overflow-y-auto flex-1 space-y-4 min-h-0"
+                                onPointerDown={(e) => e.stopPropagation()}
+                                onWheel={(e) => e.stopPropagation()}
+                            >
+                                {wizardActiveTab === 'steps' && (
+                                    <>
+                                        {/* Wizard steps card */}
+                                        <div className="bg-[#111821] border border-white/5 rounded-2xl p-4 space-y-4">
+                                            <div className="flex items-center justify-between">
+                                                <div className="flex items-center gap-2">
+                                                    <Wand2 className="w-3.5 h-3.5 text-neon-green" />
+                                                    <span className="text-xs font-bold text-white">Wizard steps</span>
+                                                </div>
+                                                <ChevronDown className="w-3.5 h-3.5 text-gray-500" />
+                                            </div>
+
+                                            <div className="space-y-3">
+                                                {wizardSteps.map(step => (
+                                                    <div key={step.id} className="flex gap-1 border border-neon-green rounded-xl overflow-hidden h-12">
+                                                        <div className="flex-[4] bg-[#070B1A] flex items-center px-3 border-r border-neon-green justify-between">
+                                                            <div className="flex items-center gap-2">
+                                                                <Layers className="w-3.5 h-3.5 text-neon-green" />
+                                                                <span className="text-[11px] text-white font-medium">{step.type}</span>
+                                                            </div>
+                                                            <ChevronDown className="w-3 h-3 text-gray-500" />
+                                                        </div>
+                                                        <div className="flex-[6] bg-[#070B1A] flex items-center px-3 justify-between">
+                                                            <input
+                                                                type="text"
+                                                                value={step.title}
+                                                                onChange={() => { }}
+                                                                className="bg-transparent border-none outline-none text-[11px] text-white w-full pr-6"
+                                                            />
+                                                            <Trash2 className="w-3.5 h-3.5 text-red-500/50 hover:text-red-500 transition-colors" />
+                                                        </div>
+                                                    </div>
+                                                ))}
+                                                <button
+                                                    onClick={() => { }}
+                                                    className="w-full py-2.5 rounded-xl border border-neon-green text-neon-green text-[11px] font-bold flex items-center justify-center gap-2 hover:bg-neon-green/5 transition-all"
+                                                >
+                                                    <Plus className="w-3.5 h-3.5" />
+                                                    Add steps
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        {/* Create card details card */}
+                                        <div className="bg-[#111821] border border-white/5 rounded-2xl p-4 space-y-4">
+                                            <div className="flex items-center justify-between">
+                                                <div className="flex items-center gap-2">
+                                                    <Layers className="w-3.5 h-3.5 text-neon-green" />
+                                                    <span className="text-xs font-bold text-white">Create card</span>
+                                                </div>
+                                                <ChevronDown className="w-3.5 h-3.5 text-gray-500" />
+                                            </div>
+                                            <div className="space-y-1.5">
+                                                <label className="text-[10px] text-gray-400 font-medium ml-1">Step title</label>
+                                                <div className="relative">
+                                                    <input
+                                                        type="text"
+                                                        placeholder="e.g Try new feature"
+                                                        className="w-full bg-[#070B1A] border border-[#1E2540] rounded-xl px-4 py-3.5 text-[11px] text-gray-500 pr-10"
+                                                        readOnly
+                                                    />
+                                                    <Pencil className="w-3.5 h-3.5 text-gray-600 absolute right-3.5 top-1/2 -translate-y-1/2" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        {/* Steps labels card */}
+                                        <div className="bg-[#111821] border border-white/5 rounded-2xl p-4 space-y-4">
+                                            <div className="flex items-center justify-between">
+                                                <div className="flex items-center gap-2">
+                                                    <Layers className="w-3.5 h-3.5 text-neon-green" />
+                                                    <span className="text-xs font-bold text-white">Steps labels</span>
+                                                </div>
+                                                <ChevronDown className="w-3.5 h-3.5 text-gray-500" />
+                                            </div>
+                                            <div className="space-y-3">
+                                                {wizardLabels.map(label => (
+                                                    <div key={label.id} className="flex gap-2">
+                                                        <button className="flex items-center gap-2 bg-[#070B1A] border border-[#1E2540] rounded-xl px-3 py-2 text-[10px] text-white font-bold border-dashed border-white/20">
+                                                            <Upload className="w-3 h-3" />
+                                                            Icon
+                                                        </button>
+                                                        <input
+                                                            type="text"
+                                                            value={label.name}
+                                                            onChange={() => { }}
+                                                            className="flex-1 bg-[#070B1A] border border-[#1E2540] rounded-xl px-4 text-[11px] text-white"
+                                                        />
+                                                        <button className="p-2.5 bg-red-500/10 text-red-500 rounded-xl border border-white/5 hover:bg-red-500 hover:text-white transition-all">
+                                                            <Trash2 className="w-3.5 h-3.5" />
+                                                        </button>
+                                                    </div>
+                                                ))}
+                                                <button
+                                                    onClick={() => { }}
+                                                    className="w-full py-2.5 rounded-xl border border-neon-green text-neon-green text-[11px] font-bold flex items-center justify-center gap-2 hover:bg-neon-green/5 transition-all"
+                                                >
+                                                    <Plus className="w-3.5 h-3.5" />
+                                                    Add labels
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        {/* Cards 1 details card */}
+                                        <div className="bg-[#111821] border border-white/5 rounded-2xl p-4 space-y-4">
+                                            <div className="flex items-center justify-between">
+                                                <div className="flex items-center gap-2">
+                                                    <Layers className="w-3.5 h-3.5 text-neon-green" />
+                                                    <span className="text-xs font-bold text-white">Cards 1</span>
+                                                </div>
+                                                <ChevronDown className="w-3.5 h-3.5 text-gray-500" />
+                                            </div>
+                                            <div className="space-y-4">
+                                                <div className="space-y-1.5">
+                                                    <label className="text-[10px] text-gray-400 font-medium ml-1">Action title</label>
+                                                    <div className="relative">
+                                                        <input
+                                                            type="text"
+                                                            placeholder="e.g Get started"
+                                                            className="w-full bg-[#070B1A] border border-[#1E2540] rounded-xl px-4 py-3.5 text-[11px] text-gray-500 pr-10"
+                                                            readOnly
+                                                        />
+                                                        <Pencil className="w-3.5 h-3.5 text-gray-600 absolute right-3.5 top-1/2 -translate-y-1/2" />
+                                                    </div>
+                                                </div>
+                                                <div className="space-y-1.5">
+                                                    <label className="text-[10px] text-gray-400 font-medium ml-1">Action description</label>
+                                                    <div className="relative">
+                                                        <input
+                                                            type="text"
+                                                            placeholder="e.g Limited time offer"
+                                                            className="w-full bg-[#070B1A] border border-[#1E2540] rounded-xl px-4 py-3.5 text-[11px] text-gray-500 pr-10"
+                                                            readOnly
+                                                        />
+                                                        <Pencil className="w-3.5 h-3.5 text-gray-600 absolute right-3.5 top-1/2 -translate-y-1/2" />
+                                                    </div>
+                                                </div>
+                                                <div className="flex gap-3">
+                                                    <div className="flex-[3] space-y-1.5">
+                                                        <label className="text-[10px] text-gray-400 font-medium ml-1">Belongs to tab</label>
+                                                        <div className="bg-[#070B1A] border border-[#1E2540] rounded-xl px-4 py-3 flex items-center justify-between text-[11px] text-white">
+                                                            None
+                                                            <ChevronDown className="w-3 h-3 text-gray-500" />
+                                                        </div>
+                                                    </div>
+                                                    <div className="flex-1 space-y-1.5">
+                                                        <label className="text-[10px] text-gray-400 font-medium ml-1">Icon</label>
+                                                        <button className="w-full h-[46px] bg-[#070B1A] border border-[#1E2540] rounded-xl flex items-center justify-center text-gray-400 border-dashed border-white/20">
+                                                            <Upload className="w-4 h-4" />
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div className="flex gap-3">
+                                                    <div className="flex-[3] space-y-1.5">
+                                                        <label className="text-[10px] text-gray-400 font-medium ml-1">Go to</label>
+                                                        <div className="bg-[#070B1A] border border-[#1E2540] rounded-xl px-4 py-3 flex items-center justify-between text-[11px] text-white">
+                                                            None
+                                                            <ChevronDown className="w-3 h-3 text-gray-500" />
+                                                        </div>
+                                                    </div>
+                                                    <div className="flex-1 space-y-1.5">
+                                                        <label className="text-[10px] text-gray-400 font-medium ml-1">Delete</label>
+                                                        <button className="w-full h-[46px] bg-[#070B1A] border border-[#1E2540] rounded-xl flex items-center justify-center text-red-500/50 hover:text-red-500 transition-colors">
+                                                            <Trash2 className="w-4 h-4" />
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <button
+                                                    onClick={() => { }}
+                                                    className="w-full py-2.5 rounded-xl border border-neon-green text-neon-green text-[11px] font-bold flex items-center justify-center gap-2 hover:bg-neon-green/5 transition-all mt-2"
+                                                >
+                                                    <Plus className="w-3.5 h-3.5" />
+                                                    Add Card
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </>
+                                )}
+
+                                {wizardActiveTab === 'appearance' && (
+                                    <>
+                                        {/* Wizard colors card */}
+                                        <div className="bg-[#111821] border border-white/5 rounded-2xl p-4 space-y-4">
+                                            <div className="flex items-center justify-between">
+                                                <div className="flex items-center gap-2">
+                                                    <Palette className="w-3.5 h-3.5 text-neon-green" />
+                                                    <span className="text-xs font-bold text-white">Wizard colors</span>
+                                                </div>
+                                                <ChevronDown className="w-3.5 h-3.5 text-gray-500" />
+                                            </div>
+                                            <div className="grid grid-cols-2 gap-4">
+                                                <div className="space-y-1.5">
+                                                    <label className="text-[10px] text-gray-400 font-medium ml-1">Background</label>
+                                                    <div className="bg-[#070B1A] border border-[#1E2540] rounded-xl px-3 py-3 flex items-center gap-3">
+                                                        <div className="w-4 h-4 rounded bg-white border border-white/10" />
+                                                        <span className="text-[10px] text-white font-mono uppercase font-bold tracking-wider">#FFFFFF</span>
+                                                    </div>
+                                                </div>
+                                                <div className="space-y-1.5">
+                                                    <label className="text-[10px] text-gray-400 font-medium ml-1">Primary text</label>
+                                                    <div className="bg-[#070B1A] border border-[#1E2540] rounded-xl px-3 py-3 flex items-center gap-3">
+                                                        <div className="w-4 h-4 rounded bg-[#1A1A1A] border border-white/10" />
+                                                        <span className="text-[10px] text-white font-mono uppercase font-bold tracking-wider">#1A1A1A</span>
+                                                    </div>
+                                                </div>
+                                                <div className="space-y-1.5">
+                                                    <label className="text-[10px] text-gray-400 font-medium ml-1">Button color</label>
+                                                    <div className="bg-[#070B1A] border border-[#1E2540] rounded-xl px-3 py-3 flex items-center gap-3">
+                                                        <div className="w-4 h-4 rounded bg-[#3B82F6]" />
+                                                        <span className="text-[10px] text-white font-mono uppercase font-bold tracking-wider">#3B82F6</span>
+                                                    </div>
+                                                </div>
+                                                <div className="space-y-1.5">
+                                                    <label className="text-[10px] text-gray-400 font-medium ml-1">Secondary text</label>
+                                                    <div className="bg-[#070B1A] border border-[#1E2540] rounded-xl px-3 py-3 flex items-center gap-3">
+                                                        <div className="w-4 h-4 rounded bg-[#6B7280]" />
+                                                        <span className="text-[10px] text-white font-mono uppercase font-bold tracking-wider">#6B7280</span>
+                                                    </div>
+                                                </div>
+                                                <div className="space-y-1.5">
+                                                    <label className="text-[10px] text-gray-400 font-medium ml-1">Button text</label>
+                                                    <div className="bg-[#070B1A] border border-[#1E2540] rounded-xl px-3 py-3 flex items-center gap-3">
+                                                        <div className="w-4 h-4 rounded bg-white border border-white/10" />
+                                                        <span className="text-[10px] text-white font-mono uppercase font-bold tracking-wider">#FFFFFF</span>
+                                                    </div>
+                                                </div>
+                                                <div className="space-y-1.5">
+                                                    <label className="text-[10px] text-gray-400 font-medium ml-1">Border color</label>
+                                                    <div className="bg-[#070B1A] border border-[#1E2540] rounded-xl px-3 py-3 flex items-center gap-3">
+                                                        <div className="w-4 h-4 rounded bg-[#D1D5DB]" />
+                                                        <span className="text-[10px] text-white font-mono uppercase font-bold tracking-wider">#D1D5DB</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </>
+                                )}
+
+                                {wizardActiveTab === 'setup' && (
+                                    <>
+                                        {/* Trigger delay card */}
+                                        <div className="bg-[#111821] border border-white/5 rounded-2xl p-4 space-y-5">
+                                            <div className="flex items-center justify-between">
+                                                <div className="flex items-center gap-2">
+                                                    <Clock className="w-3.5 h-3.5 text-neon-green" />
+                                                    <span className="text-xs font-bold text-white">Trigger wizard after</span>
+                                                </div>
+                                                <ChevronDown className="w-3.5 h-3.5 text-gray-500" />
+                                            </div>
+                                            <div className="space-y-5">
+                                                <div className="flex items-center justify-between">
+                                                    <span className="text-[11px] text-white font-medium">Delay</span>
+                                                    <div className="bg-neon-green/10 border border-neon-green text-neon-green px-3 py-1 rounded-lg text-[11px] font-bold">
+                                                        0 s
+                                                    </div>
+                                                </div>
+                                                <div className="h-1.5 bg-white/5 rounded-full relative">
+                                                    <div className="absolute top-0 left-0 h-full w-[0%] bg-neon-green rounded-full" />
+                                                    <div className="absolute top-1/2 -translate-y-1/2 left-[0%] w-4 h-4 bg-neon-green rounded-full shadow-[0_0_10px_rgba(20,255,0,0.5)]" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        {/* Visibility card */}
+                                        <div className="bg-[#111821] border border-white/5 rounded-2xl p-4 space-y-5">
+                                            <div className="flex items-center justify-between">
+                                                <div className="flex items-center gap-2">
+                                                    <Eye className="w-3.5 h-3.5 text-neon-green" />
+                                                    <span className="text-xs font-bold text-white">Visibility</span>
+                                                </div>
+                                                <ChevronDown className="w-3.5 h-3.5 text-gray-500" />
+                                            </div>
+                                            <div className="grid grid-cols-3 gap-2">
+                                                <button className="flex flex-col items-center justify-center gap-2 bg-[#070B1A] border border-neon-green text-neon-green py-3 rounded-xl transition-all">
+                                                    <Monitor className="w-4 h-4" />
+                                                    <div className="flex items-center gap-1">
+                                                        <Eye className="w-2.5 h-2.5" />
+                                                        <span className="text-[9px] font-bold">Desktop</span>
+                                                    </div>
+                                                </button>
+                                                <button className="flex flex-col items-center justify-center gap-2 bg-[#070B1A] border border-neon-green text-neon-green py-3 rounded-xl transition-all">
+                                                    <Tablet className="w-4 h-4" />
+                                                    <div className="flex items-center gap-1">
+                                                        <Eye className="w-2.5 h-2.5" />
+                                                        <span className="text-[9px] font-bold">Tablet</span>
+                                                    </div>
+                                                </button>
+                                                <button className="flex flex-col items-center justify-center gap-2 bg-[#070B1A] border border-neon-green text-neon-green py-3 rounded-xl transition-all">
+                                                    <Smartphone className="w-4 h-4" />
+                                                    <div className="flex items-center gap-1">
+                                                        <Eye className="w-2.5 h-2.5" />
+                                                        <span className="text-[9px] font-bold">Mobile</span>
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </>
+                                )}
+                            </div>
+
+                            {/* Footer Actions */}
+                            <div className="bg-[#070B1A] border-t border-white/10 px-4 py-4 mt-auto">
+                                <div className="flex items-center gap-2">
+                                    <button className="flex flex-col items-center justify-center gap-1 px-2 text-gray-500 hover:text-white transition-all">
+                                        <RotateCcw className="w-4 h-4" />
+                                        <span className="text-[9px] font-medium">Undo</span>
+                                    </button>
+
+                                    <div className="flex-1 flex items-center gap-2 ml-2">
+                                        <button className="flex-1 flex items-center justify-center gap-2 bg-[#1E2532] text-white py-4.5 rounded-2xl text-[11px] font-bold hover:bg-[#2A3445] transition-all">
+                                            <SaveIcon className="w-3.5 h-3.5 text-neon-green" />
+                                            Save
+                                        </button>
+                                        <button
+                                            onClick={() => { setIsWizardConfigOpen(false); }}
+                                            className="flex-[1.5] flex items-center justify-center gap-2 bg-[#1E2532] text-white py-4.5 rounded-2xl text-[11px] font-bold hover:bg-[#2A3445] transition-all"
+                                        >
+                                            <Plus className="w-4 h-4 text-neon-green" />
+                                            Add to page
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
+
+
                 {/* 4. Preview Modal - The actual injected modal preview (appears on webpage only) */}
                 <AnimatePresence>
                     {isPreviewModalOpen && (
@@ -2297,35 +2993,40 @@ export default function BrowserMockup({ onClose }: BrowserMockupProps) {
                     initial={{ y: 50, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 1.5, type: "spring" }}
-                    className="absolute bottom-24 left-1/2 -translate-x-1/2 w-auto max-w-[90vw] bg-[#070B1A] backdrop-blur-xl border border-[#1E2540] rounded-[2rem] py-3 px-5 flex items-center gap-4 shadow-2xl z-[70] overflow-visible"
+                    className="absolute bottom-24 left-1/2 -translate-x-1/2 w-auto max-w-[95vw] bg-[#0F141A] backdrop-blur-xl border border-[#1E2540] rounded-[2rem] py-3 px-5 flex items-center gap-4 shadow-2xl z-[70] overflow-visible"
                 >
                     {/* Logo */}
-                    <div className="flex items-center gap-3 border-r border-white/10 pr-4">
+                    <div className="flex items-center border-r border-white/10 pr-4">
                         <div className="w-8 h-8 rounded-lg bg-transparent flex items-center justify-center relative overflow-hidden">
                             <Image
-                                src="/preta-logo.png"
+                                src="/preta-dock-logo.png"
                                 alt="Preta Logo"
-                                width={32}
-                                height={32}
+                                width={24}
+                                height={24}
                                 className="w-full h-full object-contain"
                             />
                         </div>
-                        <span className="font-bold text-white text-xs tracking-[0.15em]">PRETA</span>
                     </div>
 
                     {/* Tools Main */}
                     <div className="flex items-center gap-3">
                         {[
                             { icon: CloneIcon, label: "Clone", active: isModalOpen || isInspecting, id: "clone-tool", onClick: () => { setIsModalOpen(!isModalOpen); setIsModalConfigOpen(false); setIsBannerConfigOpen(false); setIsBadgeConfigOpen(false); setIsFABConfigOpen(false); setIsInspectMenuOpen(false); } },
-                            { icon: AppWindow, label: "Modal", active: isModalConfigOpen, id: "modal-tool", onClick: () => { setIsModalConfigOpen(!isModalConfigOpen); setIsModalOpen(false); setIsBannerConfigOpen(false); setIsBadgeConfigOpen(false); setIsFABConfigOpen(false); setIsInspectMenuOpen(false); } },
+                            { icon: ModalIcon, label: "Modal", active: isModalConfigOpen, id: "modal-tool", onClick: () => { setIsModalConfigOpen(!isModalConfigOpen); setIsModalOpen(false); setIsBannerConfigOpen(false); setIsBadgeConfigOpen(false); setIsFABConfigOpen(false); setIsInspectMenuOpen(false); } },
+                            { icon: Wand2, label: "Wizard", active: isWizardConfigOpen, id: "wizard-tool", onClick: () => { setIsWizardConfigOpen(!isWizardConfigOpen); setIsModalOpen(false); setIsModalConfigOpen(false); setIsBannerConfigOpen(false); setIsBadgeConfigOpen(false); setIsFABConfigOpen(false); setIsInspectMenuOpen(false); } },
                             { icon: Megaphone, label: "Banner", active: isBannerConfigOpen, id: "banner-tool", onClick: () => { setIsBannerConfigOpen(!isBannerConfigOpen); setIsModalOpen(false); setIsModalConfigOpen(false); setIsBadgeConfigOpen(false); setIsFABConfigOpen(false); setIsInspectMenuOpen(false); } },
-                            { icon: Award, label: "Badge", active: isBadgeConfigOpen, id: "badge-tool", onClick: () => { setIsBadgeConfigOpen(!isBadgeConfigOpen); setIsModalOpen(false); setIsModalConfigOpen(false); setIsBannerConfigOpen(false); setIsFABConfigOpen(false); setIsInspectMenuOpen(false); } },
-                            { icon: Plus, label: "FAB", active: isFABConfigOpen, id: "fab-tool", onClick: () => { setIsFABConfigOpen(!isFABConfigOpen); setIsModalOpen(false); setIsModalConfigOpen(false); setIsBannerConfigOpen(false); setIsBadgeConfigOpen(false); setIsInspectMenuOpen(false); } }
+                            { icon: BadgeIcon, label: "Badge", active: isBadgeConfigOpen, id: "badge-tool", onClick: () => { setIsBadgeConfigOpen(!isBadgeConfigOpen); setIsModalOpen(false); setIsModalConfigOpen(false); setIsBannerConfigOpen(false); setIsFABConfigOpen(false); setIsInspectMenuOpen(false); } },
+                            { icon: FloatIcon, label: "Float", active: false, id: "float-tool", onClick: () => { } },
+                            { icon: ImageIcon, label: "Image", active: false, id: "image-tool", onClick: () => { } },
+                            { icon: RedirectIcon, label: "Redirect", active: false, id: "redirect-tool", onClick: () => { } },
+                            { icon: SwapIcon, label: "Swap", active: false, id: "swap-tool", onClick: () => { } },
+                            { icon: TextReplacementIcon, label: "Text", active: false, id: "text-tool", onClick: () => { } },
+                            { icon: Eraser, label: "Eraser", active: false, id: "eraser-tool", onClick: () => { } }
                         ].map((tool, i) => (
                             <div key={i} onClick={tool.onClick} className="flex flex-col items-center gap-1 group cursor-pointer relative">
                                 <div className={`w-9 h-9 rounded-xl flex items-center justify-center transition-all ${tool.active
                                     ? 'bg-white/10 text-neon-green'
-                                    : 'bg-[#0F142A] text-[#9AA4BF] group-hover:text-white group-hover:bg-white/10'
+                                    : 'bg-[#1E2732] text-[#9AA4BF] group-hover:text-white group-hover:bg-white/10'
                                     } ${
                                     // PULSE CUE: Pulse the Clone tool when in Step 1 (Idle) - ONLY MANUAL MODE
                                     !isAutoPlaying && !isModalOpen && !isInspecting && !isCloned && tool.id === 'clone-tool' ? 'animate-pulse ring-1 ring-neon-green/50' : ''
@@ -2401,16 +3102,12 @@ export default function BrowserMockup({ onClose }: BrowserMockupProps) {
                             Inspect
                             <ChevronDown className={`w-3 h-3 text-gray-400 transition-transform ${isInspectMenuOpen ? 'rotate-180 text-neon-green' : ''}`} />
                         </button>
-                        {/* Notification Badge */}
-                        <div className="absolute -top-1.5 -right-1.5 w-5 h-5 bg-neon-green rounded-full flex items-center justify-center text-[10px] font-bold text-black border-2 border-[#0A0E1A]">
-                            2
-                        </div>
                     </div>
 
                     {/* Dashboard/Manage */}
                     <div className="flex items-center gap-3 border-l border-white/10 pl-4">
                         {[
-                            { icon: PieChart, label: "Dashboard", onClick: () => { } },
+                            { icon: DashboardIcon, label: "Dashboard", onClick: () => { } },
                             {
                                 icon: SlidersHorizontal, label: "Manage", active: isManageConfigOpen, onClick: () => {
                                     setIsManageConfigOpen(!isManageConfigOpen);
@@ -2426,7 +3123,7 @@ export default function BrowserMockup({ onClose }: BrowserMockupProps) {
                             <div key={i} onClick={tool.onClick} className="flex flex-col items-center gap-1 group cursor-pointer relative">
                                 <div className={`w-9 h-9 rounded-xl flex items-center justify-center transition-all ${tool.active
                                     ? 'bg-white/10 text-neon-green'
-                                    : 'bg-[#0F142A] text-[#9AA4BF] group-hover:text-white group-hover:bg-white/10'
+                                    : 'bg-[#1E2732] text-[#9AA4BF] group-hover:text-white group-hover:bg-white/10'
                                     }`}>
                                     <tool.icon className="w-4 h-4" strokeWidth={1.5} />
                                 </div>
@@ -2440,41 +3137,11 @@ export default function BrowserMockup({ onClose }: BrowserMockupProps) {
                     </div>
 
                     {/* User Avatar */}
-                    <div className="w-9 h-9 rounded-full border-2 border-[#1E2540] bg-[#0F142A] flex items-center justify-center overflow-hidden cursor-pointer hover:border-white/40 transition-all">
+                    <div className="w-9 h-9 rounded-full border-2 border-[#1E2540] bg-[#1E2732] flex items-center justify-center overflow-hidden cursor-pointer hover:border-white/40 transition-all">
                         <User className="w-5 h-5 text-white/70" />
                     </div>
                 </motion.div>
 
-                {/* 4. Bottom Status Bar - Dynamic Instructions */}
-                <motion.div
-                    initial={{ y: 20, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ delay: 1.8 }}
-                    className="absolute bottom-8 left-1/2 -translate-x-1/2 bg-[#070B1A] border border-[#1E2540] rounded-full px-4 py-1.5 flex items-center gap-4 z-[70] shadow-2xl"
-                >
-                    <div className="flex items-center gap-2 text-neon-green text-[10px] font-bold font-mono">
-                        <div className={`w-1.5 h-1.5 rounded-full bg-neon-green ${!isCloned ? 'animate-ping' : ''}`} />
-                        {/* Dynamic Status Text: Simple for Auto-Play, Guided for Manual */}
-                        {isAutoPlaying ? (
-                            isInspecting ? "Inspecting Element..." : isCloned ? "Element Cloned Configured" : "Overlay Tool Ready"
-                        ) : (
-                            isCloned ? "SUCCESS: Element Cloned & Configured" :
-                                isInspecting ? "STEP 3: Click the Blue Button to Clone it" :
-                                    isModalOpen ? "STEP 2: Click 'Start Inspection' in Modal" :
-                                        "STEP 1: Open 'Clone' Tool from the Dock"
-                        )}
-                    </div>
-                    <div className="w-px h-2.5 bg-white/10" />
-                    <div className="flex items-center gap-2 text-gray-400 text-[10px] hover:text-white transition-colors cursor-pointer font-medium">
-                        <Plus className="w-3 h-3" />
-                        Inject Button
-                    </div>
-                    <div className="w-px h-2.5 bg-white/10" />
-                    <div className="flex items-center gap-2 text-gray-400 text-[10px] hover:text-white transition-colors cursor-pointer font-medium">
-                        <BarChart2 className="w-3 h-3" />
-                        Measure Clicks
-                    </div>
-                </motion.div>
             </div>
         </div >
     );

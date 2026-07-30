@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState, useRef } from "react";
-import { useScroll, useMotionValueEvent } from "framer-motion";
-import { Gauge, Shield, LineChart, Hourglass, AlertTriangle, TrendingUp, Zap, Lock } from "lucide-react";
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
+import { Gauge, Shield, LineChart, Hourglass, AlertTriangle, TrendingUp, Zap, Lock, Eye, MousePointer2 } from "lucide-react";
 
 export default function RoiPhilosophy() {
     const [activeCard, setActiveCard] = useState<string | null>(null);
@@ -191,29 +191,32 @@ export default function RoiPhilosophy() {
                                         /* ON STATE: Timeline */
                                         <div className="relative z-10 w-full px-4 flex flex-col items-center">
                                             <div className="relative w-full flex justify-between items-center mb-12">
-                                                {/* Connecting Line */}
-                                                <div className="absolute top-1/2 left-0 w-full h-[1px] bg-white/10 z-0" />
-                                                <div className="absolute top-1/2 left-0 h-[1px] bg-accent z-0 transition-all duration-1000 w-full" />
+                                                {/* Connecting Line - acts as a baseline */}
+                                                <div className="absolute top-[28px] left-0 w-full h-[1px] bg-white/10 z-0" />
+                                                <div className="absolute top-[28px] left-0 h-[1px] bg-accent z-0 transition-all duration-1000 w-full" />
 
                                                 {/* Nodes */}
                                                 <div className="relative z-10 flex flex-col items-center">
-                                                    <div className="w-3 h-3 rounded-full bg-accent shadow-[0_0_10px_#39FF14]" />
-                                                    <span className="mt-4 font-mono text-[10px] text-white/40">Idea</span>
+                                                    <div className="w-3 h-3 rounded-full bg-accent shadow-[0_0_10px_#39FF14] z-20 translate-y-1" />
+                                                    <span className="absolute top-10 font-mono text-[10px] text-white/40 whitespace-nowrap">Idea</span>
                                                 </div>
+
                                                 <div className="relative z-10 flex flex-col items-center">
                                                     <div className="absolute -top-7 px-2 py-0.5 bg-accent/10 border border-accent/20 rounded text-[9px] text-accent animate-pulse">Active</div>
-                                                    <div className="w-3 h-3 rounded-full bg-accent shadow-[0_0_10px_#39FF14]" />
-                                                    <span className="mt-4 font-mono text-[10px] text-white/40">UI Live</span>
+                                                    <div className="w-3 h-3 rounded-full bg-accent shadow-[0_0_10px_#39FF14] z-20 translate-y-1" />
+                                                    <span className="absolute top-10 font-mono text-[10px] text-white/40 whitespace-nowrap">UI Live</span>
                                                 </div>
+
                                                 <div className="relative z-10 flex flex-col items-center">
-                                                    <div className="w-3 h-3 rounded-full bg-accent shadow-[0_0_10px_#39FF14]" />
-                                                    <span className="mt-4 font-mono text-[10px] text-white/40">User Sees</span>
+                                                    <div className="w-3 h-3 rounded-full bg-accent shadow-[0_0_10px_#39FF14] z-20 translate-y-1" />
+                                                    <span className="absolute top-10 font-mono text-[10px] text-white/40 whitespace-nowrap">User Sees</span>
                                                 </div>
+
                                                 <div className="relative z-10 flex flex-col items-center">
-                                                    <div className="w-8 h-8 rounded-full border border-accent flex items-center justify-center bg-black">
+                                                    <div className="w-8 h-8 rounded-full border border-accent flex items-center justify-center bg-black z-20 -translate-y-1">
                                                         <Zap className="w-4 h-4 text-accent fill-accent" />
                                                     </div>
-                                                    <span className="mt-2 font-mono text-[10px] text-accent font-bold">Outcome</span>
+                                                    <span className="absolute top-10 font-mono text-[10px] text-accent font-bold whitespace-nowrap">Outcome</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -268,27 +271,34 @@ export default function RoiPhilosophy() {
                                     {activeCard === 'risk' ? (
                                         /* ON STATE: Lockdown Mockup */
                                         <div className="relative z-10 w-full flex justify-center items-center">
-                                            <div className="w-48 h-40 bg-[#121212] border border-white/10 rounded-xl relative overflow-hidden shadow-2xl">
-                                                {/* Header Bar */}
-                                                <div className="w-full h-8 bg-white/5 border-b border-white/5 flex items-center px-3 gap-1.5">
-                                                    <div className="w-8 h-1.5 bg-white/10 rounded-full" />
+                                            <div className="relative">
+                                                {/* Main Window */}
+                                                <div className="w-48 h-40 bg-[#0A0A0B] border border-white/5 rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+                                                    {/* Header Bar */}
+                                                    <div className="w-full h-8 bg-white/[0.03] border-b border-white/5 flex items-center px-3">
+                                                        <div className="w-10 h-1.5 bg-white/10 rounded-full" />
+                                                    </div>
+
+                                                    {/* Content */}
+                                                    <div className="p-4 space-y-4">
+                                                        <div className="w-full h-10 bg-[#FF9E0B]/5 border border-[#FF9E0B]/20 rounded-xl flex items-center px-3">
+                                                            <div className="w-1/2 h-1 bg-[#FF9E0B]/30 rounded-full" />
+                                                        </div>
+                                                        <div className="grid grid-cols-2 gap-3">
+                                                            <div className="h-16 bg-white/[0.02] rounded-xl border border-white/5" />
+                                                            <div className="h-16 bg-white/[0.02] rounded-xl border border-white/5" />
+                                                        </div>
+                                                    </div>
                                                 </div>
 
-                                                {/* Content */}
-                                                <div className="p-4 space-y-4">
-                                                    <div className="w-full h-8 bg-[#FF9E0B]/10 border border-[#FF9E0B]/20 rounded-md flex items-center justify-center">
-                                                        <div className="w-2/3 h-1 bg-[#FF9E0B]/40 rounded-full" />
-                                                    </div>
-                                                    <div className="flex gap-2">
-                                                        <div className="flex-1 h-12 bg-white/5 rounded-md" />
-                                                        <div className="flex-1 h-12 bg-white/5 rounded-md" />
-                                                    </div>
-                                                </div>
-
-                                                {/* Lock Icon */}
-                                                <div className="absolute top-2 right-2 w-6 h-6 rounded-full bg-[#FFB000] flex items-center justify-center shadow-[0_0_15px_rgba(255,176,0,0.5)] border border-white/20">
-                                                    <Lock className="w-3 h-3 text-black fill-black" strokeWidth={3} />
-                                                </div>
+                                                {/* Floating Lock Icon - Moved to corner */}
+                                                <motion.div
+                                                    initial={{ scale: 0, rotate: -20 }}
+                                                    animate={{ scale: 1, rotate: 0 }}
+                                                    className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-[#FFB000] flex items-center justify-center shadow-[0_0_20px_rgba(255,176,0,0.4)] border-2 border-[#0A0A0B] z-20"
+                                                >
+                                                    <Lock className="w-3.5 h-3.5 text-black fill-black" strokeWidth={3} />
+                                                </motion.div>
                                             </div>
                                         </div>
                                     ) : (
@@ -338,48 +348,48 @@ export default function RoiPhilosophy() {
                                     {activeCard === 'insight' ? (
                                         /* ON STATE: Event-Based Chart */
                                         /* OFF STATE: The new SVG you provided */
-                                        <div className="relative z-10 w-full h-full flex flex-col items-center justify-center p-4">
-                                            <svg
-                                                viewBox="0 0 361 297"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                className="w-full h-auto max-h-[180px] drop-shadow-2xl"
-                                            >
-                                                <rect width="361.005" height="296.5" rx="12" fill="#0E1623" fillOpacity="0.56" />
-                                                <path d="M4.26855 268C10.7748 242.5 35.3929 242.742 44.1992 241.683C56.9589 240.154 70.2736 249.495 83.1194 248.443C96.2332 247.371 109.165 239.949 122.049 234.914C135.125 229.81 147.913 218.492 160.979 217.996C173.863 217.509 187.226 232.878 199.899 231.524C213.204 230.102 225.619 214.684 238.829 207.837C251.588 201.223 264.549 192.496 277.758 190.918C290.518 189.389 304.12 200.074 316.679 197.688C325.651 195.98 338.627 188.084 355.608 174" stroke="#3B82F6" strokeWidth="3" strokeMiterlimit="2" />
+                                        <div className="relative z-10 w-full h-full flex flex-col items-center justify-center p-2 md:p-4">
+                                            <div className="w-full max-w-[340px] h-[180px] relative mt-2 md:mt-4 scale-[0.85] sm:scale-100 origin-center">
+                                                {/* Backdrop Grid */}
+                                                <div className="absolute inset-0 flex flex-col justify-between opacity-10 pointer-events-none">
+                                                    {[...Array(5)].map((_, i) => (
+                                                        <div key={i} className="w-full h-[1px] border-t border-dashed border-white" />
+                                                    ))}
+                                                </div>
 
-                                                <path d="M53.8169 233.559H52.8169V185.559H53.8169V233.559Z" fill="url(#paint0_linear_1174_403)" />
+                                                {/* Bars Container */}
+                                                <div className="absolute inset-0 flex items-end justify-between px-2 sm:px-4 pb-6">
+                                                    {/* Bar 1: Impression */}
+                                                    <div className="flex flex-col items-center gap-3 w-[80px] sm:w-16">
+                                                        <div className="flex items-center gap-1 sm:gap-1.5 whitespace-nowrap">
+                                                            <span className="text-white font-bold text-[9px] sm:text-[10px]">Impression</span>
+                                                            <Eye className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-white" />
+                                                        </div>
+                                                        <div className="w-full sm:w-full h-[120px] bg-gradient-to-t from-[#0055ff] to-[#0070ff] rounded-t-lg shadow-[0_0_20px_rgba(0,85,255,0.3)]" />
+                                                        <span className="text-[#39ff14] font-jetbrains-mono text-[10px] sm:text-[11px] font-bold">12.4%</span>
+                                                    </div>
 
-                                                <path d="M21.6138 158.059C21.6138 155.849 23.4046 154.059 25.6138 154.059H80.6138C82.8229 154.059 84.6138 155.849 84.6138 158.059V174.059C84.6138 176.268 82.8229 178.059 80.6138 178.059H25.6138C23.4046 178.059 21.6138 176.268 21.6138 174.059V158.059Z" fill="#3B82F6" fillOpacity="0.1" />
-                                                <path d="M25.6138 154.559H80.6138C82.5468 154.559 84.1138 156.126 84.1138 158.059V174.059C84.1138 175.992 82.5468 177.559 80.6138 177.559H25.6138C23.6808 177.559 22.1138 175.992 22.1138 174.059V158.059C22.1138 156.126 23.6808 154.559 25.6138 154.559Z" stroke="#3B82F6" strokeOpacity="0.2" />
-                                                <text x="53" y="172" textAnchor="middle" fill="#3B82F6" fontSize="20" fontWeight="bold">Impression</text>
+                                                    {/* Bar 2: Click */}
+                                                    <div className="flex flex-col items-center gap-3 w-[80px] sm:w-16">
+                                                        <div className="flex items-center gap-1 sm:gap-1.5 whitespace-nowrap">
+                                                            <MousePointer2 className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-white fill-white" />
+                                                            <span className="text-white font-bold text-[9px] sm:text-[10px]">Click</span>
+                                                        </div>
+                                                        <div className="w-full sm:w-full h-[80px] bg-gradient-to-t from-[#2066ef] to-[#4086ff] rounded-t-lg" />
+                                                        <span className="text-[#39ff14] font-jetbrains-mono text-[10px] sm:text-[11px] font-bold">8.1%</span>
+                                                    </div>
 
-                                                <path d="M146.614 123.059C146.614 120.849 148.405 119.059 150.614 119.059H196.192C198.401 119.059 200.192 120.849 200.192 123.059V138.559C200.192 140.768 198.401 142.559 196.192 142.559H150.614C148.405 142.559 146.614 140.768 146.614 138.559V123.059Z" fill="#3B82F6" fillOpacity="0.1" />
-                                                <path d="M150.614 119.559H196.192C198.125 119.559 199.692 121.126 199.692 123.059V138.559C199.692 140.492 198.125 142.059 196.192 142.059H150.614C148.681 142.059 147.114 140.492 147.114 138.559V123.059C147.114 121.126 148.681 119.559 150.614 119.559Z" stroke="#3B82F6" strokeOpacity="0.2" />
-                                                <text x="173" y="137" textAnchor="middle" fill="#3B82F6" fontSize="20" fontWeight="bold">Click</text>
-                                                <path d="M173.895 214.559H172.895V150.559H173.895V214.559Z" fill="url(#paint1_linear_1174_403)" />
-
-
-                                                <path d="M264.301 128.559C264.301 126.349 266.092 124.559 268.301 124.559H324.848C327.057 124.559 328.848 126.349 328.848 128.559V144.059C328.848 146.268 327.057 148.059 324.848 148.059H268.301C266.092 148.059 264.301 146.268 264.301 144.059V128.559Z" fill="#3B82F6" fillOpacity="0.1" />
-                                                <path d="M268.301 125.059H324.848C326.781 125.059 328.348 126.626 328.348 128.559V144.059C328.348 145.992 326.781 147.559 324.848 147.559H268.301C266.368 147.559 264.801 145.992 264.801 144.059V128.559C264.801 126.626 266.368 125.059 268.301 125.059Z" stroke="#3B82F6" strokeOpacity="0.2" />
-                                                <text x="296" y="143" textAnchor="middle" fill="#3B82F6" fontSize="20" fontWeight="bold">Dismissed</text>
-                                                <path d="M297.067 188.059H296.067V156.059H297.067V188.059Z" fill="url(#paint2_linear_1174_403)" />
-
-                                                <defs>
-                                                    <linearGradient id="paint0_linear_1174_403" x1="53.3169" y1="185.559" x2="53.3169" y2="137.559" gradientUnits="userSpaceOnUse">
-                                                        <stop stopColor="#3B82F6" />
-                                                        <stop offset="1" stopOpacity="0" />
-                                                    </linearGradient>
-                                                    <linearGradient id="paint1_linear_1174_403" x1="173.395" y1="150.559" x2="173.395" y2="86.5586" gradientUnits="userSpaceOnUse">
-                                                        <stop stopColor="#3B82F6" />
-                                                        <stop offset="1" stopOpacity="0" />
-                                                    </linearGradient>
-                                                    <linearGradient id="paint2_linear_1174_403" x1="296.567" y1="156.059" x2="296.567" y2="124.059" gradientUnits="userSpaceOnUse">
-                                                        <stop stopColor="#3B82F6" />
-                                                        <stop offset="1" stopOpacity="0" />
-                                                    </linearGradient>
-                                                </defs>
-                                            </svg>
+                                                    {/* Bar 3: Dismissed */}
+                                                    <div className="flex flex-col items-center gap-3 w-[80px] sm:w-16">
+                                                        <div className="flex items-center gap-1 sm:gap-1.5 whitespace-nowrap">
+                                                            <span className="text-lg sm:text-xl leading-none text-white font-light">×</span>
+                                                            <span className="text-white font-bold text-[9px] sm:text-[10px]">Dismissed</span>
+                                                        </div>
+                                                        <div className="w-full sm:w-full h-[60px] bg-gradient-to-t from-[#4a8df3] to-[#7eb1ff] rounded-t-lg opacity-80" />
+                                                        <span className="text-[#39ff14] font-jetbrains-mono text-[10px] sm:text-[11px] font-bold">5.2%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     ) : (
                                         /* OFF STATE: User-provided SVG */
