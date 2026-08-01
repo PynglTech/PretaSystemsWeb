@@ -38,7 +38,7 @@ export default function Security() {
                         />
                         <div className="relative w-full h-full">
                             <Image
-                                src="/security-lock-v2.png"
+                                src="/security-lock-neon.png"
                                 alt="Security Lock"
                                 fill
                                 className="object-contain object-bottom mix-blend-lighten scale-125"
